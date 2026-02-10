@@ -1,0 +1,42 @@
+---
+import Book from "./Book.astro";
+
+
+const items = [
+	{ name: 'El Sector Muerto', 
+	  description: 'lore ipsunlore lore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore lore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsunlore ipsunlore ipsun lore ipsunlore ipsun ipsunlore ipsun lore ipsunlore ipsun ipsun lore ipsunlore ipsun',
+	  labels: [{ name: 'Ficción' }, { name: 'Aventura' }]},
+	{ name: 'Antologia', description: '/about', labels: [{ name: 'Ficción' }, { name: 'Aventura' }]},
+	{ name: 'La guerra de los Tentaculos', description: '/contact', labels: [{ name: 'Ficción' }, { name: 'Aventura' }]},
+	{ name: 'La guerra de los Tentaculos', description: '/contact',labels: [{ name: 'Ficción' }, { name: 'Aventura' }]},
+
+];
+---
+
+<section id="container">
+	{items.map((item) => (
+		<Book id="book_container" book={item} />
+	))}
+</section>
+
+<style>
+	body{
+		background-color: #64736C;
+
+	}
+	#container {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1rem;
+		margin-top: 5rem;
+	}
+	/*
+	#F26F5A rosa
+	#6FB394 verde oscuro
+	#5AF2AE verde claro
+	#9D756F marron
+	#64736C gris oscuro
+	#483A37 marron oscuro
+	*/
+</style>

@@ -1,0 +1,96 @@
+---
+import Label from './Label.astro';
+const { name, description, labels } = Astro.props.book;
+---
+
+<div id="book_background">
+	<section id="book_cover">
+		<img src="src/assets/perfil.png" alt="Book Cover" />
+	</section>
+	<section id="book_data">
+		<h2>{name}</h2>
+		<p id="description">{description}</p>
+		<div id="label_list">
+			{labels.map((label: {name: string}) => (
+				<Label id="label" label={label} />
+			))}
+
+		</div>
+	</section>
+<style>
+	#book_background{
+		display: flex;
+		background-color: #5b776a !important;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #483A37;
+		margin: 0;
+		padding: 0;
+
+		/* width */
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #e9e3e3;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #853333;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #a84d4d;
+		}
+	}
+	
+	#book_cover{
+		img{
+			width: 200px;
+			border-right: #483A37 2px solid;
+			margin: 0px;
+		}
+	}
+
+	#book_data{
+		width: 73%;
+		display: flex;
+		flex-direction: column;
+		justify-content: top;
+		padding-left: 1rem;
+		color: white;
+		h2{
+			margin: 0.5rem 0;
+			padding: 0;
+		}
+		#description{
+			height: 6rem;
+			width: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+			margin: 0 0 0 1rem;
+			padding: 0;
+		}
+		#label_list{
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+	}
+
+
+	/*
+	#F26F5A rosa
+	#6FB394 verde oscuro
+	#5AF2AE verde claro
+	#9D756F marron
+	#64736C gris oscuro
+	#483A37 marron oscuro
+	*/
+</style>
