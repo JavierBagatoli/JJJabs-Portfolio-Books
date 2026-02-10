@@ -3,7 +3,10 @@ const libros = Astro.props.libros as {
     date: string,
     books: {
         title: string,
-        description: string
+        description: string,
+		saga: string,
+		icon?: string,
+		urlRead?: string,
         }[]
     }[];
 ---
@@ -18,7 +21,21 @@ const libros = Astro.props.libros as {
 				{date.books.map((info) => (
 					<div id="mini_book">
 						<img src="./src/assets/perfil.png" alt="Linea de tiempo" />
+						<img 
+							id="signature_book"
+							src={`./src/assets/${info.icon}.png`}
+							alt="Saga: Los Cinco Anillos" />
 						<p class="dm-mono-light">{info.title}</p>
+						
+						{info.urlRead &&
+							<a href={info.urlRead} target="_blank" rel="noopener noreferrer">
+								<img 
+									id="redirect_to_reed_or_buy"
+									src="./src/assets/leer.png"
+									alt="Ir a Leer o Comprar"
+								/>
+							</a>
+						}
 					</div>
 				))}
 				
@@ -80,7 +97,26 @@ const libros = Astro.props.libros as {
 		padding-right: 0.5rem;
 		gap: 0.5rem;
 		width: auto;
-		font-family: ;
+		min-width: 220px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	#signature_book, #redirect_to_reed_or_buy{
+		height: 2rem !important;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem ;
+		padding-right: 0.5rem;
+		border-radius: 0 0.4rem 0.4rem 0;
+	}
+	#redirect_to_reed_or_buy{
+		transition: 0.3s ease;
+		border: none !important;
+		padding-right: 0rem !important;
+		border-left: rgba(0, 0, 0, 0.274) 2px dashed !important;
+	}
+	#redirect_to_reed_or_buy:hover{
+		cursor: pointer;
+		transform: scale(1.2);
 	}
 	/*
 	#F26F5A rosa

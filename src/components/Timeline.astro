@@ -4,12 +4,20 @@ import TimelineComponent from '../components/timeline/TimelineComponent.astro';
 const librosAmanecer = [
 	{ date: "10.000", 
 		books: [
-			{ title: "Un Robo Más", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+			{ 
+				title: "Un Robo Más",
+				icon: "corona",
+				saga: "",  
+			  	description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 		]
 	},
 	{ date: "50.000", 
 		books: [
-			{ title: "No era solo un robo.", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+			{ 
+				title: "No era solo un robo.",
+				icon: "corona",
+				saga: "", 
+				description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 		]
 	},
 ]
@@ -17,40 +25,74 @@ const librosAmanecer = [
 const librosOcaso = [
 	{ date: "600.000", 
 		books: [
-			{ title: "La Raiz", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+			{ title: "La Raiz",
+			icon: "libro",
+			saga: "",
+			urlRead: "https://drive.google.com/file/d/1bhwZrGxOHvXFtD_dhB_kSEhh_TKs6pca/view",
+			description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 		]
 	},
 	{ date: "700.000", 
 		books: [
-			{ title: "El Sector Muerto: El Fracaso de los antiguos", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+			{ title: "El Sector Muerto: El Fracaso de los antiguos",
+			icon: "jeringa",
+			saga: "",
+			description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 		]
 	},
 	{ date: "700.002", books: [
-		{ title: "Nueva Vida", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		{ title: "Nueva Vida",
+		icon: "jeringa",
+		saga: "",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.002", books: [
-		{ title: "La Ultima", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		{ title: "La Ultima",
+		icon: "libro",
+		saga: "",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.200", books: [
-		{ title: "La Senda", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		{ title: "La Senda",
+		icon: "libro",
+		saga: "",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.302", books: [
-		{ title: "Migajas del Pasado", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		{ title: "Migajas del Pasado",
+		icon: "libro",
+		saga: "",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.312", books: [
-		{ title: "Siempre fue así", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		{ title: "Siempre fue así",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.313", books: [
-		{ title: "Los Cinco Anillos 2", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		{ title: "Orbita de Riesgo",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.314", books: [
-		{ title: "Los Cinco Anillos 3", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		{ title: "Zona Gris",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.315", books: [
-		{ title: "Los Cinco Anillos 4", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		{ title: "Especies Protegidas",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.316", books: [
-		{ title: "Los Cinco Anillos 5", description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		{ title: "Una Ultima Compra",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 ];
 ---
@@ -63,9 +105,7 @@ const librosOcaso = [
 	<TimelineComponent libros={librosOcaso} />
 	<h3>Anochecer</h3>
 	<TimelineComponent libros={[]} />
-
-	
-	
+ 	
 </div>
 
 <style>
