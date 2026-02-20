@@ -1,0 +1,160 @@
+---
+import Label from './Label.astro';
+const { isAvalible, saga, title, description, labels } = Astro.props.book;
+---
+
+{isAvalible? 
+<div id="book_background">
+	<section id="book_cover">
+		<img src="src/assets/perfil.png" alt="Book Cover" />
+	</section>
+
+	<section id="book_data">
+		<h2>{title} {saga.length > 2 && <span> - {saga}</span>}</h2>
+		<p id="description">{description}</p>
+		<div id="label_list">
+			{labels?.map((label: string) => (
+				<Label id="label" label={label} />
+			))}
+
+		</div>
+	</section>
+</div>
+:
+<div id="book_background_no_avalible">
+	<section id="book_cover">
+		<img src="src/assets/perfil.png" alt="Book Cover" />
+	</section>
+
+	<section id="book_data">
+		<h2>{title} {saga.length > 2 && <span> - {saga}</span>}</h2>
+		<p id="description">{description}</p>
+		<div id="label_list">
+			{labels?.map((label: string) => (
+				<Label id="label" label={label} />
+			))}
+
+		</div>
+	</section>
+</div>
+}
+<style>
+	#book_background{
+		justify-content: start;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		background-color: #5b776a !important;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #483A37;
+		margin: 0;
+		padding: 0;
+
+		/* width */
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #e9e3e3;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #853333;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #a84d4d;
+		}
+	}
+	
+	#book_background_no_avalible{
+		justify-content: start;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		background-color: #7b807d !important;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #2b2a2a;
+		margin: 0;
+		padding: 0;
+		color: #cec7c7;
+
+		/* width */
+		::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #e9e3e3;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #853333;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #a84d4d;
+		}
+
+		#book_cover{
+			img{
+				filter: saturate(0.2);
+			}
+		}
+
+		#label_list{
+			#label{
+				background-color: #cec7c7;
+			}
+		}
+	}
+
+
+	#book_cover{
+		img{
+			width: 200px;
+			border: #483A37 2px dashed;
+			margin: 0.5rem;
+		}
+	}
+
+	#book_data{
+		display: flex;
+		flex-direction: column;
+		justify-content: top;
+		padding: 1rem;
+		color: white;
+		#description{
+			width: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+			padding: 0;
+		}
+		#label_list{
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+	}
+
+
+	/*
+	#F26F5A rosa
+	#6FB394 verde oscuro
+	#5AF2AE verde claro
+	#9D756F marron
+	#64736C gris oscuro
+	#483A37 marron oscuro
+	*/
+</style>

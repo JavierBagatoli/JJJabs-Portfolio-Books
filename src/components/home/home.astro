@@ -1,28 +1,54 @@
 ---
 ---
 <main id="home">
-    <div>
-
-    </div>
-    <section>
+    <section style={{
+            padding: '2rem',
+            gap: '2rem',
+            display: 'flex',
+            'flex-direction': 'column',
+        }}>
         <div>
-            <h1>Bienvenido a Ocaso</h1>
-            <p>Este es un intento de universo literario basado los siguientes pilares:</p>
+            <h1>Bienvenido a mi universo de historias</h1>
+            <p>Aquí podrás encontrar una galaxia vieja donde hay mega estructuras antiguas y civilizaciones caídas. Es un lugar donde los humanos son casi un mito gracias a su poderío tecnológico que ya se extiende por cientos de miles de años.</p>
+            <p>Cada relato o novela que encuentres será realizado desde una criatura no humana explorar sus mundos. Con el tiempo cada novela será un grano de arena que sume a un total más grande donde se relacionaran los diversos alienígenas y tramas.</p>
+            <p>Las unión de estas historias no implicara la necesidad de leer todo lo anterior, solo encontrares especies que se relacionan, mundos que volverán a estar presentes, pero con los cambios que se han contado y referencias para poder descubrir como algo a podido afectar a lo largo del tiempo.</p>
+            <p>Los pilares que quiero usar para escribir mi galaxia son los siguientes:</p>
+            
             <ul>
-                <li>La humanidad no es el eje de mis historias.</li>
-                <li>Los personajes son los alienigenas.</li>
-                <li>Intentare priorizar la ciencia ficcion sobre la magia.</li>
-                <li>No todo seran disparas y combates, quiero historias tranquilas.</li>
-                <li>Quiero conocer historias distintas.</li>
+                <li>Los humanos somos casi un mito, rara vez aparecerán.</li>
+                <li>Los protagonistas y personajes serán alienígenas.</li>
+                <li>La ciencia ficción/space opera predomina sobre la magia.</li>
+                <li>No deseo que cada libro sea un enfrentamiento a muerte con armas o grandes flotas.</li>
             </ul>
-            <p>
-                Algo que advierto, es que estoy comenzando en le mundo de la escritura. Intento hacer lo mejor posible, pero siempre tendre fallos.
-            </p>
+            <p>Tengo gran interés en completar este proyecto de escritura, pero admito ser novato. Tengo apoyo y ayuda, trato de mejorar cada día, pero tendré fallos mientras lo hago y público.</p>
         </div>
 
         
-        <div>
-
+        <div style={{
+            'display': 'flex',
+            'flex-direction': 'row',
+            gap: '2rem',
+             'justify-content': 'center',
+             'flex-wrap': 'wrap'
+        }}>
+            <img
+                style={{
+                   filter: "drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));"
+                }}
+                src="./src/assets/Portada_El_Sector_Muerto.jpg"
+                alt="Logo de Ocaso" />
+            <img
+                style={{
+                   filter: "drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));"
+                }}
+                src="./src/assets/Portada_El_Sector_Muerto.jpg"
+                alt="Logo de Ocaso" />
+            <img
+                style={{
+                   filter: "drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));"
+                }}
+                src="./src/assets/Portada_El_Sector_Muerto.jpg"
+                alt="Logo de Ocaso" />
         </div>
     </section>
 </main>
@@ -30,5 +56,17 @@
 <style>
     body{
         background-color: #64736C;
+
+        h1, p, li {
+            color: #000000ce;
+        }
+    }
+
+    p {
+        text-align: justify;
+        font-weight: 500;
+    }
+    li{
+        font-weight: 500;
     }
 </style>

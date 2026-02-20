@@ -1,0 +1,78 @@
+export const BOOKS_OCASO = [
+	{ date: "600.000", 
+		books: [
+			{ isAvalible: true,
+			title: "La Raiz",
+			labels: ["Ciencia Ficcion"],
+			icon: "libro",
+			saga: "",
+			urlRead: "https://drive.google.com/file/d/1bhwZrGxOHvXFtD_dhB_kSEhh_TKs6pca/view",
+			description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		]
+	},
+	{ date: "700.000", 
+		books: [
+			{ 
+			isAvalible: true,	
+			title: "El Sector Muerto: El Fracaso de los antiguos",
+			labels: ["Ciencia Ficcion", "Mutantes"],
+			icon: "jeringa",
+			saga: "",
+			description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+		]
+	},
+	{ date: "700.002", books: [
+		{ title: "Nueva Vida",
+		icon: "jeringa",
+		saga: "",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+	]},
+	{ date: "700.002", books: [
+		{ title: "La Ultima",
+		icon: "libro",
+		saga: "",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+	]},
+	{ date: "700.200", books: [
+		{ title: "La Senda",
+		icon: "libro",
+		saga: "",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+	]},
+	{ date: "700.302", books: [
+		{ title: "Migajas del Pasado",
+		icon: "libro",
+		saga: "",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+	]},
+	{ date: "700.312", books: [
+		{ title: "Siempre fue así",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+	]},
+	{ date: "700.313", books: [
+		{ title: "Orbita de Riesgo",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+	]},
+	{ date: "700.314", books: [
+		{ title: "Zona Gris",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+	]},
+	{ date: "700.315", books: [
+		{ title: "Especies Protegidas",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+	]},
+	{ date: "700.316", books: [
+		{ title: "Una Ultima Compra",
+		icon: "mantis",
+		saga: "Los Cinco Anillos",  
+		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+	]},
+];
