@@ -1,5 +1,9 @@
 ---
 const nameSeleced = Astro.props.nameSeleced;
+
+function handleClick(name:string):void {
+	console.log(`Has hecho clic en ${name}`);
+}
 ---
 
 <div id="navbar">
@@ -49,7 +53,11 @@ const nameSeleced = Astro.props.nameSeleced;
 		li:hover{
 			background-color: #2e2727;
 		}
+		li.selected{
+			background-color: #362e2e;
+		}
 	}
+
 
 	/*
 	#F26F5A rosa

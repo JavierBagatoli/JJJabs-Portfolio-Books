@@ -2,6 +2,7 @@
 const libros = Astro.props.libros as {
     date: string,
     books: {
+		isAvalible?: boolean,
         title: string,
         description: string,
 		saga: string,
@@ -19,7 +20,7 @@ const libros = Astro.props.libros as {
 			</section>
 			<section id="data-timeline">
 				{date.books.map((info) => (
-					<div id="mini_book">
+					<div id="mini_book" class={!info.isAvalible? "unvalible": ""}>
 						<img src="./src/assets/perfil.png" alt="Linea de tiempo" />
 						<img 
 							id="signature_book"
@@ -100,6 +101,10 @@ const libros = Astro.props.libros as {
 		min-width: 220px;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+
+	.unvalible{
+		background-color: #a0aca6 !important;
 	}
 	#signature_book, #redirect_to_reed_or_buy{
 		height: 2rem !important;
