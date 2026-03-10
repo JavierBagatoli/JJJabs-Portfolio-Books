@@ -26,7 +26,7 @@ const libros = Astro.props.libros as {
 							id="signature_book"
 							src={`./src/assets/${info.icon}.png`}
 							alt="Saga: Los Cinco Anillos" />
-						<p class="dm-mono-light">{info.title}</p>
+						<p class="dm-mono-light text-pc">{info.title}</p>
 						
 						{info.urlRead &&
 							<a href={info.urlRead} target="_blank" rel="noopener noreferrer">
@@ -37,6 +37,7 @@ const libros = Astro.props.libros as {
 								/>
 							</a>
 						}
+						<p class="dm-mono-light text-mobile">{info.title}</p>
 					</div>
 				))}
 				
@@ -49,20 +50,15 @@ const libros = Astro.props.libros as {
 <style>
 	body{
 		background-color: #64736C;
-
 	}
+	
 	#timeline {
 		border-left: black 1px solid;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 		padding-left: 0.5rem;
-	}
-	#container {
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		margin-top: 5rem;
+		width:5.5rem;
 	}
 	#year-timeline{
 		display: flex;
@@ -123,6 +119,50 @@ const libros = Astro.props.libros as {
 		cursor: pointer;
 		transform: scale(1.2);
 	}
+
+	@media screen and (max-width: 500px) {
+		.text-pc{
+			display: none;
+		}
+		.text-mobile{
+			display: flex;
+			padding: 0rem 1rem 0rem 1rem;
+			height: 1rem;
+			overflow: hidden; /* Hides the overflowed content */
+			text-overflow: ellipsis;
+			margin-top: 0rem;
+			margin-bottom: 0rem;
+			padding: 0.5rem;
+			max-width: 12rem;
+		}
+		#mini_book{
+			display: flex;
+			flex-direction: row;
+			flex-wrap:wrap;
+		}
+		#data-timeline{
+			height: auto;
+		}
+		#redirect_to_reed_or_buy{
+			border-left: none !important;
+		}
+
+		img{
+			border-bottom: rgba(0, 0, 0, 0.274) 2px dashed;;
+		}
+		
+	}
+	@media screen and (min-width: 500px) {
+		.text-pc{
+			display: flex;
+		}
+		.text-mobile{
+			display: none;
+		}
+
+	}
+
+
 	/*
 	#F26F5A rosa
 	#6FB394 verde oscuro

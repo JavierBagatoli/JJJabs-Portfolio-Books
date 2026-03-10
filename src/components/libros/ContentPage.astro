@@ -6,13 +6,13 @@ import Book from "./Book.astro";
 const items = BOOKS_OCASO;
 ---
 
-<section id="container">
+<main id="container">
 	{items?.map((item) => (
 		item.books?.map((book) => (
 				<Book id="book_container" book={book} />
 			))
 	))}
-</section>
+</main>
 
 <style>
 	body{
@@ -24,7 +24,7 @@ const items = BOOKS_OCASO;
 		flex-direction: column;
 		gap: 1rem;
 		padding: 1rem;
-		margin-top: 5rem;
+		margin-top: 3rem;
 	}
 	/*
 	#F26F5A rosa

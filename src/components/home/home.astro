@@ -1,14 +1,13 @@
 ---
 ---
-<main id="home">
+<main id="container">
     <section style={{
-            padding: '2rem',
             gap: '2rem',
             display: 'flex',
             'flex-direction': 'column',
         }}>
-        <div>
-            <h1>Bienvenido a mi universo de historias</h1>
+        <div class="card">
+            <h1>Bienvenido a mi universo literario</h1>
             <p>Aquí podrás encontrar una galaxia vieja donde hay mega estructuras antiguas y civilizaciones caídas. Es un lugar donde los humanos son casi un mito gracias a su poderío tecnológico que se extiende por cientos de miles de años.</p>
             <p>Cada relato o novela será contada desde la perspectiva de una criatura no humana explorar sus mundos. Con el tiempo cada novela será un grano de arena que sume a un total más grande donde se relacionaran los diversos alienígenas y tramas.</p>
             <p>No será necesario leer cada obra en orden. Encontrarás especies recurrentes, mundos que reaparecen y cambios que revelan cómo el paso del tiempo transforma incluso las civilizaciones más poderosas.</p>
@@ -42,7 +41,8 @@
                 style={{
                    filter: "drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));"
                 }}
-                src="./src/assets/Portada_El_Sector_Muerto.jpg"
+                height="390"
+                src="./src/assets/Migajas_Del_Pasado.webp"
                 alt="Logo de Ocaso" />
             <img
                 style={{
@@ -55,12 +55,35 @@
 </main>
 
 <style>
+    #container {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		padding: 1rem;
+        padding-top: 4rem;
+	}
+
+    .card p, .card ul li{
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 75;
+  
+    }
     body{
         background-color: #64736C;
 
         h1, p, li {
             color: #000000ce;
         }
+    }
+    .card{
+        background-color: #b1c2ba;
+        border: dashed black 2px;
+        padding: 0rem 2rem 2rem 2rem;
+        filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.34));
     }
 
     p {

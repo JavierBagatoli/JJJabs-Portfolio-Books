@@ -7,7 +7,7 @@ export const BOOKS_OCASO = [
 			icon: "libro",
 			saga: "",
 			urlRead: "https://drive.google.com/file/d/1bhwZrGxOHvXFtD_dhB_kSEhh_TKs6pca/view",
-			description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
+			description: "Historia corta que narra los acontecimientos que vivieron los Plestri al descubrir que no estaban solos. En esta historia se presenta al unión de los sectores exteriores para poder defenderse de una amenaza capaz de saltar entre galaxias." },
 		]
 	},
 	{ date: "700.000", 

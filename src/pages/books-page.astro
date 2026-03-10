@@ -1,11 +1,10 @@
 ---
+import ContentPage from '../components/libros/ContentPage.astro';
 import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
-import Home from '../components/home/home.astro';
 ---
 
 <Layout>
-	<Navbar 
-		nameSeleced="home"/>
-	<Home />
+	<Navbar nameSeleced="libros" />
+	<ContentPage />
 </Layout>
