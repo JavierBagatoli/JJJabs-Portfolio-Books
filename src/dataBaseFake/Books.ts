@@ -51,7 +51,7 @@ export const BOOKS_OCASO = [
 	]},
 	{ date: "700.312", books: [
 		{ title: "Siempre fue así",
-		isAvalible: true,	
+		isAvalible: false,	
 		icon: "mantis",
 		saga: "Los Cinco Anillos",  
 		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
@@ -64,8 +64,10 @@ export const BOOKS_OCASO = [
 	]},
 	{ date: "700.314", books: [
 		{ title: "Zona Gris",
+		isAvalible: true,
 		icon: "mantis",
 		saga: "Los Cinco Anillos",  
+		labels: ["Ciencia Ficción", "Aventura", "Acción"],
 		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.315", books: [
