@@ -23,6 +23,7 @@ export const BOOKS_OCASO = [
 	},
 	{ date: "700.002", books: [
 		{ title: "Nueva Vida",
+		isAvalible: false,	
 		icon: "jeringa",
 		labels: ["Ciencia Ficcion", "Mutantes"],
 		saga: "",  
@@ -37,14 +38,15 @@ export const BOOKS_OCASO = [
 	]},
 	{ date: "700.200", books: [
 		{ title: "La Senda",
-		icon: "libro",
+		isAvalible: false,	
+		icon: "pangolin",
 		labels: ["Genesis"],
 		saga: "",  
 		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
 	]},
 	{ date: "700.302", books: [
 		{ title: "Migajas del Pasado",
-		icon: "libro",
+		icon: "pangolin",
 		saga: "",
 		labels: ["Ciencia Ficción", "Recuentos de la vida", "Cozy"],
 		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
@@ -58,6 +60,7 @@ export const BOOKS_OCASO = [
 	]},
 	{ date: "700.313", books: [
 		{ title: "Orbita de Riesgo",
+		isAvalible: false,	
 		icon: "mantis",
 		saga: "Los Cinco Anillos",  
 		description: "Comenzamos a trabajar en el proyecto de la línea de tiempo." },
