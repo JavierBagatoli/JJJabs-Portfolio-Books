@@ -117,20 +117,33 @@ const libros = Astro.props.libros as {
 		border: none !important;
 		padding-right: 0rem !important;
 		border-left: rgba(0, 0, 0, 0.274) 2px dashed !important;
+		animation: pulse 2s infinite;
 	}
 	#redirect_to_reed_or_buy:hover{
 		cursor: pointer;
 		transform: scale(1.2);
+	}
+	
+	@keyframes pulse {
+		0% {
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.274);
+		}
+		70% {
+			box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+		}
+		100% {
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		}
 	}
 
 	@media screen and (max-width: 500px) {
 		.text-pc{
 			display: none;
 		}
+
 		.text-mobile{
 			display: flex;
 			padding: 0rem 1rem 0rem 1rem;
-			height: 1rem;
 			overflow: hidden; /* Hides the overflowed content */
 			text-overflow: ellipsis;
 			margin-top: 0rem;
@@ -153,8 +166,25 @@ const libros = Astro.props.libros as {
 		Image, img{
 			border-bottom: rgba(0, 0, 0, 0.274) 2px dashed;;
 		}
-		
+
+		#redirect_to_reed_or_buy{
+			animation: pulse1 2s infinite;
+			border-radius: 0 !important;
+		}
+
+		@keyframes pulse1 {
+			0% {
+				box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.274);
+			}
+			70% {
+				box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+			}
+			100% {
+				box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+			}
+		}
 	}
+
 	@media screen and (min-width: 500px) {
 		.text-pc{
 			display: flex;
@@ -162,9 +192,7 @@ const libros = Astro.props.libros as {
 		.text-mobile{
 			display: none;
 		}
-
 	}
-
 
 	/*
 	#F26F5A rosa
