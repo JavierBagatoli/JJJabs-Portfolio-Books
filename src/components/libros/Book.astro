@@ -1,12 +1,14 @@
 ---
 import Label from './Label.astro';
 const { isAvalible, saga, title, description, labels } = Astro.props.book;
+import amalgama from '../../assets/species/Amalgama.png';
+import Image from 'astro/components/Image.astro';
 
 ---
 
 <div id="book_background" class={isAvalible? "": "no_avalible"}>
 	<section id="book_cover">
-		<img src="src/assets/perfil.png" alt="Book Cover" />
+		<Image src={amalgama} alt="Book Cover" height="200"/>
 	</section>
 
 	<section id="book_data">
@@ -59,7 +61,7 @@ const { isAvalible, saga, title, description, labels } = Astro.props.book;
 		background-color: #7b807d !important;
 
 		#book_cover{
-			Image,img{
+			Image, img{
 				filter: saturate(0.2);
 			}
 		}
