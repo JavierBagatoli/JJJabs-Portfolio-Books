@@ -2,6 +2,7 @@
 import SectorMuerto  from './src/assets/Portada_El_Sector_Muerto.jpg';
 import MigajasDelPasado from './src/assets/Migajas_Del_Pasado.webp';
 import Mantis from './src/assets/Mantis.webp';
+import Image from 'astro/components/Image.astro';
 ---
 <main id="container">
     <section style={{
@@ -34,24 +35,24 @@ import Mantis from './src/assets/Mantis.webp';
              'justify-content': 'center',
              'flex-wrap': 'wrap'
         }}>
-            <img
+            <Image
                 style={{
                    filter: "drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));"
                 }}
-                src={`${SectorMuerto}`}
+                src={SectorMuerto}
                 alt="Logo de Ocaso" />
-            <img
+            <Image
                 style={{
                    filter: "drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));"
                 }}
                 height="390"
-                src={`${MigajasDelPasado}`}
+                src={MigajasDelPasado}
                 alt="Logo de Ocaso" />
-            <img
+            <Image
                 style={{
                    filter: "drop-shadow(8px 8px 16px rgba(0, 0, 0, 0.5));"
                 }}
-                src={`${Mantis}`}
+                src={Mantis}
                 alt="Logo de Ocaso" />
         </div>
     </section>
