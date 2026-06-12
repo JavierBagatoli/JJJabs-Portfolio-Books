@@ -8,7 +8,7 @@ function handleClick(name:string):void {
 
 <div id="navbar">
 	<nav>
-		<ul>
+		<ul class="pc">
 			<li onclick="window.location.href='/'"
 				class={nameSeleced === "home" ? "selected" : ""}><a href="/">Home</a></li>
 			<li onclick="window.location.href='/books-page'"
@@ -17,6 +17,16 @@ function handleClick(name:string):void {
 				class={nameSeleced === "timeline" ? "selected" : ""}><a href="/time-line-page">Cronología</a></li>
 			<li onclick="window.location.href='/universo-page'"
 				class={nameSeleced === "universo" ? "selected" : ""}><a href="/universo-page">Universo</a></li>
+		</ul>
+		<ul class="mobile">
+			<li onclick="window.location.href='/'"
+				class={nameSeleced === "home" ? "selected" : ""}><a href="/">🏠</a></li>
+			<li onclick="window.location.href='/books-page'"
+				class={nameSeleced === "libros" ? "selected" : ""}><a href="/books-page">📖</a></li>
+			<li onclick="window.location.href='/time-line-page'"
+				class={nameSeleced === "timeline" ? "selected" : ""}><a href="/time-line-page">⌛</a></li>
+			<li onclick="window.location.href='/universo-page'"
+				class={nameSeleced === "universo" ? "selected" : ""}><a href="/universo-page">💫</a></li>
 		</ul>
 	</nav>
 </div>
@@ -62,13 +72,28 @@ function handleClick(name:string):void {
 		}
 	}
 
+	.mobile{
+		display: none;
+	}
 
-	/*
-	#F26F5A rosa
-	#6FB394 verde oscuro
-	#5AF2AE verde claro
-	#9D756F marron
-	#64736C gris oscuro
-	#483A37 marron oscuro
-	*/
+	@media screen and (max-width: 500px) {
+		.pc{
+			display: none;
+		}
+		.mobile{
+			width: 100%;
+			position: fixed;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 1rem;
+			filter: grayscale(100%);
+			
+		}
+		nav{
+			position: fixed;
+			bottom: 0;
+			top: auto;
+		}
+	}
 </style>
