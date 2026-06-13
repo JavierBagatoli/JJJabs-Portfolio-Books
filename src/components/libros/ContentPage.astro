@@ -6,10 +6,16 @@ import Book from "./Book.astro";
 const items = BOOKS_OCASO;
 ---
 
-<main id="container">
+<div id="container">
 	{items?.map((item) => (
 		item.books?.map((book) => (
 				<Book id="book_container" book={book} />
 			))
 	))}
-</main>
+</div>
+
+<style>
+	#container {
+		width: 100%;
+}
+</style>
