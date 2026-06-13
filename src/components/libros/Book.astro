@@ -30,9 +30,8 @@ import Image from 'astro/components/Image.astro';
 		display: flex;
 		flex-direction: row;
 		background-color: #5b776a !important;
-		border-width: 2px;
-		border-style: solid;
-		border-color: #483A37;
+		border: #483A37 dashed 0.25rem;
+		border-radius: 0.75rem;
 		margin: 0;
 		padding: 0;
 
@@ -87,8 +86,9 @@ import Image from 'astro/components/Image.astro';
 	#book_cover{
 		Image,img{
 			width: 200px;
-			border: #483A37 2px dashed;
+			border-radius: 0.5rem;
 			margin: 0.5rem;
+			filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.34));
 		}
 	}
 

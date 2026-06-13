@@ -90,7 +90,7 @@ const species = [
 
 	<section id="species">
 		{species.map((specie) => (
-			<div class="specie-card">
+			<div class="specie-card full-size">
 				<h2>{specie.name}</h2>
 				<div  class="img-description">
 					<Image 
@@ -118,7 +118,8 @@ const species = [
 <style>
 	.card{
         background-color: #b1c2ba;
-        border: dashed black 2px;
+        border: dashed black 0.2rem;
+		border-radius: 0.75rem;
         padding: 0rem 2rem 2rem 2rem;
         filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.34));
     }
@@ -139,8 +140,8 @@ const species = [
 		border-radius: 0.5rem;
 	}
 	.specie-card{
-		padding-bottom: 2rem;
-		border-bottom: #483a373f solid 0.2rem;
+		border-radius: 0.75rem;
+		border: #483a37 dashed 0.25rem;
 	}
 
 	.img-description{
@@ -151,7 +152,17 @@ const species = [
 		text-align: justify;
 		justify-content: start;
 		align-items: start;
+		filter: none;
 	}
+
+	.full-size{
+		background-color: #7e8984;
+		margin: 1rem;
+		margin-top: 2rem;
+		padding: 1rem;
+		padding-top: 0.25rem;
+	}
+
 	@media only screen and (max-width: 600px)  {
 		.img-description{
 			flex-wrap: wrap;
