@@ -1,7 +1,4 @@
 ---
-import stock from '../../assets/perfil.png';
-import Image from 'astro/components/Image.astro';
-
 const libros = Astro.props.libros as {
     date: string,
     books: {
@@ -11,6 +8,7 @@ const libros = Astro.props.libros as {
 		saga: string,
 		icon?: string,
 		urlRead?: string,
+		img?: string
         }[]
     }[];
 ---
@@ -24,7 +22,6 @@ const libros = Astro.props.libros as {
 			<section id="data-timeline">
 				{date.books.map((info) => (
 					<div id="mini_book" class={info.isAvalible === undefined? "unvalible": !info.isAvalible ? "warning" : ""}>
-						<Image src={stock} alt="Linea de tiempo" height={50} width={50}/>
 						<img 
 							id="signature_book"
 							src={`/${info.icon}.png`}
@@ -51,6 +48,10 @@ const libros = Astro.props.libros as {
 </div>
 
 <style>
+	.noImg{
+		height: 50px;
+		width: 50px;
+	}
 	#timeline {
 		border-left: black 1px solid;
 		display: flex;
@@ -107,9 +108,7 @@ const libros = Astro.props.libros as {
 	}
 	#signature_book, #redirect_to_reed_or_buy{
 		height: 2rem !important;
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem ;
-		padding-right: 0.5rem;
+		padding: 0.5rem;
 		border-radius: 0 0.4rem 0.4rem 0;
 	}
 	#redirect_to_reed_or_buy{

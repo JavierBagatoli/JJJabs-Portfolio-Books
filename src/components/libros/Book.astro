@@ -1,14 +1,13 @@
 ---
 import Label from './Label.astro';
-const { isAvalible, saga, title, description, labels } = Astro.props.book;
-import amalgama from '../../assets/species/Amalgama.png';
+const {img, isAvalible, saga, title, description, labels } = Astro.props.book;
 import Image from 'astro/components/Image.astro';
-
+import noAvalible from '../../../public/work-in-progress.png'
 ---
 
 <div id="book_background" class={isAvalible? "": "no_avalible"}>
 	<section id="book_cover">
-		<Image src={amalgama} alt="Book Cover" height="200"/>
+		<Image src={img? img: noAvalible} alt="Book Cover" height="200"/>
 	</section>
 
 	<section id="book_data">
@@ -18,7 +17,6 @@ import Image from 'astro/components/Image.astro';
 			{labels?.map((label: string) => (
 				<Label id="label" label={label} />
 			))}
-
 		</div>
 	</section>
 </div>
