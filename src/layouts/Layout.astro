@@ -1,3 +1,30 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	canonical?: string;
+	type?: 'website' | 'article';
+}
+
+const {
+	title = 'JJ Jabs — Universo literario',
+	description = 'Explora una galaxia de civilizaciones alienígenas, megaestructuras antiguas y mundos perdidos.',
+	image = '/preview.jpg',
+	canonical,
+	type = 'website',
+} = Astro.props;
+
+const siteUrl = 'https://jjjabs.netlify.app';
+
+const absoluteImage = image.startsWith('http')
+	? image
+	: `${siteUrl}${image}`;
+
+const canonicalUrl = canonical
+	? `${siteUrl}${canonical}`
+	: Astro.url.href;
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,32 +33,27 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>JJ Jabs</title>
+		
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-	
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	
-		<meta property="og:title" content="JJ Jabs — Universo literario" />
-		<meta
-		property="og:description"
-		content="Explora una galaxia de civilizaciones alienígenas, megaestructuras antiguas y mundos perdidos."
-		/>
-		<meta property="og:image" content="https://jjjabs.netlify.app/preview.jpg" />
-		<meta property="og:url" content="https://jjjabs.netlify.app/" />
-		<meta property="og:type" content="website" />
+		<!-- Open Graph -->
+		<meta property="og:type" content={type} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={absoluteImage} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:site_name" content="JJ Jabs" />
+		<meta property="og:locale" content="es_ES" />
 
+		<!-- Twitter / X -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="JJ Jabs — Universo literario" />
-		<meta
-		name="twitter:description"
-		content="Explora mi universo literario de ciencia ficción y space opera."
-		/>
-		<meta name="twitter:image" content="https://jjjabs.netlify.app/preview.jpg" />
-			
-	
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={absoluteImage} />
 	</head>
 	<body>
 		<slot />
