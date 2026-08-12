@@ -1,9 +1,5 @@
 ---
 const nameSeleced = Astro.props.nameSeleced;
-
-function handleClick(name:string):void {
-	console.log(`Has hecho clic en ${name}`);
-}
 ---
 
 <div id="navbar">
@@ -17,7 +13,7 @@ function handleClick(name:string):void {
 				class={nameSeleced === "timeline" ? "selected" : ""}><a href="/time-line-page">Cronología</a></li>
 			<li onclick="window.location.href='/universo-page'"
 				class={nameSeleced === "universo" ? "selected" : ""}><a href="/universo-page">Universo</a></li>
-		</ul>
+		</ul> 
 		<ul class="mobile">
 			<li onclick="window.location.href='/'"
 				class={nameSeleced === "home" ? "selected" : ""}><a href="/">🏠</a></li>
