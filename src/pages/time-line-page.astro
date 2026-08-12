@@ -2,10 +2,13 @@
 import Navbar from '../components/Navbar.astro';
 import Timeline from '../components/timeline/Timeline.astro';
 import Layout from '../layouts/Layout.astro';
+import './index.css'
 ---
 
 <Layout>
 	<Navbar
 		nameSeleced="timeline"/>
-	<Timeline />
+	<div class="center">	
+		<Timeline />
+	</div>
 </Layout>

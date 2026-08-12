@@ -2,10 +2,13 @@
 import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
 import Home from '../components/home/home.astro';
+import './index.css'
 ---
 
 <Layout>
 	<Navbar 
 		nameSeleced="home"/>
-	<Home />
+	<div class="center">
+		<Home />
+	</div>
 </Layout>

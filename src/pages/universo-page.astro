@@ -2,10 +2,13 @@
 import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
 import ContentUniverso from '../components/universo/ContentUniverso.astro';
+import './index.css'
 ---
 
 <Layout>
 	<Navbar 
 		nameSeleced="universo"/>
-	<ContentUniverso />
+	<div class="center">
+		<ContentUniverso />
+	</div>
 </Layout>
