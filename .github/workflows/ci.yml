@@ -41,4 +41,4 @@ jobs:
         run: pnpm build
 
       - name: Lighthouse
-        run: npx lhci autorun
+        run: pnpm dlx @lhci/cli autorun
