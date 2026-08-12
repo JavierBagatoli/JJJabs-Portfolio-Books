@@ -5,6 +5,7 @@ interface Props {
 	image?: string;
 	canonical?: string;
 	type?: 'website' | 'article';
+	structuredData?: Record<string, unknown>;
 }
 
 const {
@@ -13,6 +14,7 @@ const {
 	image = '/preview.jpg',
 	canonical,
 	type = 'website',
+	structuredData
 } = Astro.props;
 
 const siteUrl = 'https://jjjabs.netlify.app';
@@ -54,6 +56,22 @@ const canonicalUrl = canonical
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={absoluteImage} />
+
+		<!-- JSON-LD -->
+		{structuredData?(
+			<script
+				type="application/ld+json"
+				set:html={JSON.stringify(structuredData)}
+			/>)
+		:(
+			<script type="application/ld+json" set:html={JSON.stringify({
+				"@context": "https://schema.org",
+				"@type": "WebSite",
+				"name": "JJ Jabs",
+				"url": "https://jjjabs.netlify.app",
+				"description": "Universo literario de ciencia ficción y space opera.",
+			})} 
+		/>)}
 	</head>
 	<body>
 		<slot />

@@ -11,7 +11,13 @@ import './index.css'
 	canonical="/"
 	>
 	<Navbar 
-		nameSeleced="home"/>
+		nameSeleced="home"
+		structuredData={{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "JJ Jabs",
+			"url": "https://jjjabs.netlify.app"
+		}}/>
 	<div class="center">
 		<Home />
 	</div>
