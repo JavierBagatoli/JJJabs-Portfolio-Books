@@ -1,114 +1,114 @@
 ---
-import Label from './Label.astro';
-const {img, isAvalible, saga, title, description, labels } = Astro.props.book;
-import Image from 'astro/components/Image.astro';
-import noAvalible from '../../../public/work-in-progress.png'
+import Label from "./Label.astro";
+const { img, isAvalible, saga, title, description, labels } = Astro.props.book;
+import Image from "astro/components/Image.astro";
+import noAvalible from "../../../public/work-in-progress.png";
 ---
 
-<div id="book_background" class={isAvalible? "": "no_avalible"}>
-	<section id="book_cover">
-		<Image src={img? img: noAvalible} alt="Book Cover" height="200"/>
-	</section>
+<div id="book_background" class={isAvalible ? "" : "no_avalible"}>
+  <section id="book_cover">
+    <Image src={img ? img : noAvalible} alt="Book Cover" height="200" />
+  </section>
 
-	<section id="book_data">
-		<h2>{title} {saga.length > 2 && <span> - {saga}</span>}</h2>
-		<p id="description">{description}</p>
-		<div id="label_list">
-			{labels?.map((label: string) => (
-				<Label id="label" label={label} />
-			))}
-		</div>
-	</section>
+  <section id="book_data">
+    <h2>{title} {saga.length > 2 && <span> - {saga}</span>}</h2>
+    <p id="description">{description}</p>
+    <div id="label_list">
+      {labels?.map((label: string) => <Label id="label" label={label} />)}
+    </div>
+  </section>
 </div>
 
 <style>
-	#book_background{
-		container-type: inline-size; /* permite medir su ancho */
-		justify-content: start;
-		display: flex;
-		flex-direction: row;
-		background-color: #5b776a !important;
-		border: #483A37 dashed 0.25rem;
-		border-radius: 0.75rem;
-		margin: 0;
-		padding: 0;
+  #book_background {
+    container-type: inline-size; /* permite medir su ancho */
+    justify-content: start;
+    display: flex;
+    flex-direction: row;
+    background-color: #5b776a !important;
+    border: #483a37 dashed 0.25rem;
+    border-radius: 0.75rem;
+    margin: 0;
+    padding: 0;
 
-		/* width */
-		::-webkit-scrollbar {
-			width: 10px;
-		}
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-		/* Track */
-		::-webkit-scrollbar-track {
-			background: #e9e3e3;
-		}
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #e9e3e3;
+    }
 
-		/* Handle */
-		::-webkit-scrollbar-thumb {
-			background: #853333;
-		}
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #853333;
+    }
 
-		/* Handle on hover */
-		::-webkit-scrollbar-thumb:hover {
-			background: #a84d4d;
-		}
-	}
-	
-	#book_background.no_avalible{
-		background-color: #7b807d !important;
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a84d4d;
+    }
+  }
 
-		#book_cover{
-			Image, img{
-				filter: saturate(0.2);
-			}
-		}
+  #book_background.no_avalible {
+    background-color: #7b807d !important;
 
-		#label_list{
-			#label{
-				background-color: #cec7c7;
-			}
-		}
-	}
+    #book_cover {
+      Image,
+      img {
+        filter: saturate(0.2);
+      }
+    }
 
-	@media screen and (max-width: 650px) {
-		#book_background{
-			justify-content: center;
-			flex-wrap: wrap;
-			margin: 0rem 1rem;
-		}
+    #label_list {
+      #label {
+        background-color: #cec7c7;
+      }
+    }
+  }
 
-		h2{
-			margin: 0rem;
-		}
-	}
+  @media screen and (max-width: 650px) {
+    #book_background {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0rem 1rem;
+    }
 
-	#book_cover{
-		Image,img{
-			width: 200px;
-			border-radius: 0.5rem;
-			margin: 0.5rem;
-			filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.34));
-		}
-	}
+    h2 {
+      margin: 0rem;
+    }
+  }
 
-	#book_data{
-		display: flex;
-		flex-direction: column;
-		justify-content: top;
-		padding: 1rem;
-		color: white;
-		#description{
-			width: 100%;
-			overflow-y: auto;
-			overflow-x: hidden;
-			padding: 0;
-		}
-		#label_list{
-			margin-top: 0.5rem;
-			margin-bottom: 0.5rem;
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.5rem;
-		}
-	}
+  #book_cover {
+    Image,
+    img {
+      width: 200px;
+      border-radius: 0.5rem;
+      margin: 0.5rem;
+      filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.34));
+    }
+  }
+
+  #book_data {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    padding: 1rem;
+    color: white;
+    #description {
+      width: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 0;
+    }
+    #label_list {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  }
 </style>

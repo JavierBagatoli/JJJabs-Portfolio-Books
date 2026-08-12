@@ -1,160 +1,176 @@
 ---
 interface Props {
-	title?: string;
-	description?: string;
-	image?: string;
-	canonical?: string;
-	type?: 'website' | 'article';
-	structuredData?: Record<string, unknown>;
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+  type?: "website" | "article";
+  structuredData?: Record<string, unknown>;
 }
 
 const {
-	title = 'JJ Jabs — Universo literario',
-	description = 'Explora una galaxia de civilizaciones alienígenas, megaestructuras antiguas y mundos perdidos.',
-	image = '/preview.jpg',
-	canonical,
-	type = 'website',
-	structuredData
+  title = "JJ Jabs — Universo literario",
+  description = "Explora una galaxia de civilizaciones alienígenas, megaestructuras antiguas y mundos perdidos.",
+  image = "/preview.jpg",
+  canonical,
+  type = "website",
+  structuredData,
 } = Astro.props;
 
-const siteUrl = 'https://jjjabs.netlify.app';
+const siteUrl = "https://jjjabs.netlify.app";
 
-const absoluteImage = image.startsWith('http')
-	? image
-	: `${siteUrl}${image}`;
+const absoluteImage = image.startsWith("http") ? image : `${siteUrl}${image}`;
 
-const canonicalUrl = canonical
-	? `${siteUrl}${canonical}`
-	: Astro.url.href;
+const canonicalUrl = canonical ? `${siteUrl}${canonical}` : Astro.url.href;
 ---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>JJ Jabs</title>
-		
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	
-		<!-- Open Graph -->
-		<meta property="og:type" content={type} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={absoluteImage} />
-		<meta property="og:url" content={canonicalUrl} />
-		<meta property="og:site_name" content="JJ Jabs" />
-		<meta property="og:locale" content="es_ES" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>JJ Jabs</title>
 
-		<!-- Twitter / X -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={absoluteImage} />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-		<!-- JSON-LD -->
-		{structuredData?(
-			<script
-				type="application/ld+json"
-				set:html={JSON.stringify(structuredData)}
-			/>)
-		:(
-			<script type="application/ld+json" set:html={JSON.stringify({
-				"@context": "https://schema.org",
-				"@type": "WebSite",
-				"name": "JJ Jabs",
-				"url": "https://jjjabs.netlify.app",
-				"description": "Universo literario de ciencia ficción y space opera.",
-			})} 
-		/>)}
-	</head>
-	<body>
-		<slot />
-	</body>
+    <!-- Open Graph -->
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={absoluteImage} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="JJ Jabs" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImage} />
+
+    <!-- JSON-LD -->
+    {
+      structuredData ? (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(structuredData)}
+        />
+      ) : (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "JJ Jabs",
+            url: "https://jjjabs.netlify.app",
+            description: "Universo literario de ciencia ficción y space opera.",
+          })}
+        />
+      )
+    }
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		justify-content: center;
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    justify-content: center;
 
-		height: 100%;
-		background-color: #64736C;
+    height: 100%;
+    background-color: #64736c;
 
-		.dm-mono-light {
-			font-family: "DM Mono", monospace;
-			font-weight: 300;
-			font-style: normal;
-		}
+    .dm-mono-light {
+      font-family: "DM Mono", monospace;
+      font-weight: 300;
+      font-style: normal;
+    }
 
-			.dm-mono-regular, p, li {
-				font-family: "DM Mono", monospace;
-				font-weight: 400;
-				font-style: normal;
-			}
+    .dm-mono-regular,
+    p,
+    li {
+      font-family: "DM Mono", monospace;
+      font-weight: 400;
+      font-style: normal;
+    }
 
-			li{
-				line-height: 1.4rem;
-			}
+    li {
+      line-height: 1.4rem;
+    }
 
-			.dm-mono-medium, h1 {
-				font-family: "DM Mono", monospace;
-				font-weight: 500;
-				font-style: normal;
-				letter-spacing: 0rem;
-			}
+    .dm-mono-medium,
+    h1 {
+      font-family: "DM Mono", monospace;
+      font-weight: 500;
+      font-style: normal;
+      letter-spacing: 0rem;
+    }
 
-			h3,h2 {
-				font-family: "DM Mono", monospace;
-				font-weight: 500;
-				font-style: normal;
-			}
+    h3,
+    h2 {
+      font-family: "DM Mono", monospace;
+      font-weight: 500;
+      font-style: normal;
+    }
 
-			.dm-mono-light-italic {
-			font-family: "DM Mono", monospace;
-			font-weight: 300;
-			font-style: italic;
-			}
+    .dm-mono-light-italic {
+      font-family: "DM Mono", monospace;
+      font-weight: 300;
+      font-style: italic;
+    }
 
-			.dm-mono-regular-italic {
-			font-family: "DM Mono", monospace;
-			font-weight: 400;
-			font-style: italic;
-			}
+    .dm-mono-regular-italic {
+      font-family: "DM Mono", monospace;
+      font-weight: 400;
+      font-style: italic;
+    }
 
-			.dm-mono-medium-italic {
-			font-family: "DM Mono", monospace;
-			font-weight: 500;
-			font-style: italic;
-			}
+    .dm-mono-medium-italic {
+      font-family: "DM Mono", monospace;
+      font-weight: 500;
+      font-style: italic;
+    }
 
-		#container {
-			display: flex;
-			flex-direction: column;
-			gap: 1rem;
-			padding: 1rem;
-			padding-top: 4rem;
-			max-width: 80rem;
-			justify-self: center;
-			background: linear-gradient(90deg,rgba(89, 161, 99, 0.05) 0%, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0.05) 100%);
-			border: #483A37 4px dashed;
-			filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.34));
+    #container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      padding-top: 4rem;
+      max-width: 80rem;
+      justify-self: center;
+      background: linear-gradient(
+        90deg,
+        rgba(89, 161, 99, 0.05) 0%,
+        rgba(0, 0, 0, 0.02) 50%,
+        rgba(0, 0, 0, 0.05) 100%
+      );
+      border: #483a37 4px dashed;
+      filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.34));
+    }
+  }
 
-		}
-	}
-
-	@media screen and (max-width: 500px) {
-		body {
-			#container {
-				padding: 1rem;
-			}
-		}
-	}
+  @media screen and (max-width: 500px) {
+    body {
+      #container {
+        padding: 1rem;
+      }
+    }
+  }
 </style>

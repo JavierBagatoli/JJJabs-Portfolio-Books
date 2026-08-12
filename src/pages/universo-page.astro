@@ -1,18 +1,17 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Layout from '../layouts/Layout.astro';
-import ContentUniverso from '../components/universo/ContentUniverso.astro';
-import './index.css'
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import ContentUniverso from "../components/universo/ContentUniverso.astro";
+import "./index.css";
 ---
 
 <Layout
-	title="Universo — JJ Jabs"
-	description="Conoce las especies, civilizaciones y mundos que forman el universo de JJ Jabs."
-	canonical="/universo-page"
+  title="Universo — JJ Jabs"
+  description="Conoce las especies, civilizaciones y mundos que forman el universo de JJ Jabs."
+  canonical="/universo-page"
 >
-	<Navbar 
-		nameSeleced="universo"/>
-	<div class="center">
-		<ContentUniverso />
-	</div>
+  <Navbar nameSeleced="universo" />
+  <div class="center">
+    <ContentUniverso />
+  </div>
 </Layout>

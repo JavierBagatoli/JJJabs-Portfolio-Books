@@ -2,20 +2,19 @@
 import { BOOKS_OCASO } from "../../dataBaseFake/Books";
 import Book from "./Book.astro";
 
-
 const items = BOOKS_OCASO;
 ---
 
 <div id="container">
-	{items?.map((item) => (
-		item.books?.map((book) => (
-				<Book id="book_container" book={book} />
-			))
-	))}
+  {
+    items?.map((item) =>
+      item.books?.map((book) => <Book id="book_container" book={book} />),
+    )
+  }
 </div>
 
 <style>
-	#container {
-		width: 100%;
-}
+  #container {
+    width: 100%;
+  }
 </style>

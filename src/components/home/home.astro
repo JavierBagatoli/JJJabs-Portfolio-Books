@@ -1,82 +1,100 @@
 ---
-import SectorMuerto from '../../assets/Portada_El_Sector_Muerto.jpg';
-import MigajasDelPasado from '../../assets/Migajas_Del_Pasado.webp';
-import ZonGris from '../../assets/ZonaGris.jpg'
-import Image from 'astro/components/Image.astro';
+import SectorMuerto from "../../assets/Portada_El_Sector_Muerto.jpg";
+import MigajasDelPasado from "../../assets/Migajas_Del_Pasado.webp";
+import ZonGris from "../../assets/ZonaGris.jpg";
+import Image from "astro/components/Image.astro";
 ---
-<main id="container">
-    <section style={{
-            gap: '2rem',
-            display: 'flex',
-            'flex-direction': 'column',
-        }}>
-        <div class="card">
-            <h2>Bienvenido a mi universo literario</h2>
-            <p>Aquí podrás encontrar una galaxia vieja donde hay mega estructuras antiguas y civilizaciones caídas. Es un lugar donde los humanos son casi un mito gracias a su poderío tecnológico que se extiende por cientos de miles de años.</p>
-            <p>Cada relato o novela será contada desde la perspectiva de una criatura no humana explorar sus mundos. Con el tiempo cada novela será un grano de arena que sume a un total más grande donde se relacionaran los diversos alienígenas y tramas.</p>
-            <p>No será necesario leer cada obra en orden. Encontrarás especies recurrentes, mundos que reaparecen y cambios que revelan cómo el paso del tiempo transforma incluso las civilizaciones más poderosas.</p>
-            
-            <h3>Los pilares de esta galaxia:</h3>
-            
-            <ul>
-                <li>Los humanos son casi un mito. Rara vez aparecen.</li>
-                <li>Los protagonistas son alienígenas.</li>
-                <li>La ciencia ficción y la space opera predominan sobre la magia.</li>
-                <li>No todas las historias giran en torno a guerras o grandes batallas espaciales.</li>
-            </ul>
-            <p>Tengo gran interés en completar este proyecto de escritura, pero admito ser novato. Tengo apoyo y ayuda, trato de mejorar cada día, pero tendré fallos mientras lo hago y público.</p>
-        </div>
 
-        
-        <div style={{
-            'display': 'flex',
-            'flex-direction': 'row',
-            gap: '2rem',
-             'justify-content': 'center',
-             'flex-wrap': 'wrap'
-        }}>
-            <Image
-                src={SectorMuerto}
-                alt="Logo de Ocaso" />
-            <Image
-                height="390"
-                src={MigajasDelPasado}
-                alt="Logo de Ocaso" />
-            <Image
-                height="390"
-                src={ZonGris}
-                alt="Logo de Ocaso" />
-        </div>
-    </section>
+<main id="container">
+  <section
+    style={{
+      gap: "2rem",
+      display: "flex",
+      "flex-direction": "column",
+    }}
+  >
+    <div class="card">
+      <h2>Bienvenido a mi universo literario</h2>
+      <p>
+        Aquí podrás encontrar una galaxia vieja donde hay mega estructuras
+        antiguas y civilizaciones caídas. Es un lugar donde los humanos son casi
+        un mito gracias a su poderío tecnológico que se extiende por cientos de
+        miles de años.
+      </p>
+      <p>
+        Cada relato o novela será contada desde la perspectiva de una criatura
+        no humana explorar sus mundos. Con el tiempo cada novela será un grano
+        de arena que sume a un total más grande donde se relacionaran los
+        diversos alienígenas y tramas.
+      </p>
+      <p>
+        No será necesario leer cada obra en orden. Encontrarás especies
+        recurrentes, mundos que reaparecen y cambios que revelan cómo el paso
+        del tiempo transforma incluso las civilizaciones más poderosas.
+      </p>
+
+      <h3>Los pilares de esta galaxia:</h3>
+
+      <ul>
+        <li>Los humanos son casi un mito. Rara vez aparecen.</li>
+        <li>Los protagonistas son alienígenas.</li>
+        <li>La ciencia ficción y la space opera predominan sobre la magia.</li>
+        <li>
+          No todas las historias giran en torno a guerras o grandes batallas
+          espaciales.
+        </li>
+      </ul>
+      <p>
+        Tengo gran interés en completar este proyecto de escritura, pero admito
+        ser novato. Tengo apoyo y ayuda, trato de mejorar cada día, pero tendré
+        fallos mientras lo hago y público.
+      </p>
+    </div>
+
+    <div
+      style={{
+        display: "flex",
+        "flex-direction": "row",
+        gap: "2rem",
+        "justify-content": "center",
+        "flex-wrap": "wrap",
+      }}
+    >
+      <Image src={SectorMuerto} alt="Logo de Ocaso" />
+      <Image height="390" src={MigajasDelPasado} alt="Logo de Ocaso" />
+      <Image height="390" src={ZonGris} alt="Logo de Ocaso" />
+    </div>
+  </section>
 </main>
 
 <style>
-    .card p, .card ul li{
-        font-family: "Roboto", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 500;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 75;
-  
+  .card p,
+  .card ul li {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 75;
+  }
+  body {
+    h1,
+    p,
+    li {
+      color: #000000ce;
     }
-    body{
-        h1, p, li {
-            color: #000000ce;
-        }
-    }
-    .card{
-        background-color: #b1c2ba;
-        border: dashed black 0.2rem;
-        border-radius: 0.75rem;
-        padding: 0rem 2rem 2rem 2rem;
-    }
+  }
+  .card {
+    background-color: #b1c2ba;
+    border: dashed black 0.2rem;
+    border-radius: 0.75rem;
+    padding: 0rem 2rem 2rem 2rem;
+  }
 
-    p {
-        text-align: justify;
-        font-weight: 500;
-    }
-    li{
-        font-weight: 500;
-    }
+  p {
+    text-align: justify;
+    font-weight: 500;
+  }
+  li {
+    font-weight: 500;
+  }
 </style>

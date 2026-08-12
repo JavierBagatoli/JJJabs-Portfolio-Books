@@ -1,18 +1,17 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Timeline from '../components/timeline/Timeline.astro';
-import Layout from '../layouts/Layout.astro';
-import './index.css'
+import Navbar from "../components/Navbar.astro";
+import Timeline from "../components/timeline/Timeline.astro";
+import Layout from "../layouts/Layout.astro";
+import "./index.css";
 ---
 
 <Layout
-	title="Línea temporal — JJ Jabs"
-	description="Recorre la historia del universo de JJ Jabs a través de sus acontecimientos y civilizaciones."
-	canonical="/time-line-page"
+  title="Línea temporal — JJ Jabs"
+  description="Recorre la historia del universo de JJ Jabs a través de sus acontecimientos y civilizaciones."
+  canonical="/time-line-page"
 >
-	<Navbar
-		nameSeleced="timeline"/>
-	<div class="center">	
-		<Timeline />
-	</div>
+  <Navbar nameSeleced="timeline" />
+  <div class="center">
+    <Timeline />
+  </div>
 </Layout>

@@ -1,24 +1,25 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Layout from '../layouts/Layout.astro';
-import Home from '../components/home/home.astro';
-import './index.css'
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import Home from "../components/home/home.astro";
+import "./index.css";
 ---
 
 <Layout
-	title="JJ Jabs — Universo literario"
-	description="Explora una galaxia de civilizaciones alienígenas, megaestructuras antiguas y mundos perdidos."
-	canonical="/"
-	>
-	<Navbar 
-		nameSeleced="home"
-		structuredData={{
-			"@context": "https://schema.org",
-			"@type": "WebSite",
-			"name": "JJ Jabs",
-			"url": "https://jjjabs.netlify.app"
-		}}/>
-	<div class="center">
-		<Home />
-	</div>
+  title="JJ Jabs — Universo literario"
+  description="Explora una galaxia de civilizaciones alienígenas, megaestructuras antiguas y mundos perdidos."
+  canonical="/"
+>
+  <Navbar
+    nameSeleced="home"
+    structuredData={{
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "JJ Jabs",
+      url: "https://jjjabs.netlify.app",
+    }}
+  />
+  <div class="center">
+    <Home />
+  </div>
 </Layout>
