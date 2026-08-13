@@ -1,0 +1,117 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import { BOOKS_OCASO } from "../../dataBaseFake/Books";
+import Layout from "../../layouts/Layout.astro";
+import "../index.css";
+
+export function getStaticPaths() {
+  const BOOKS: { title: string; description: string }[] = [];
+
+  BOOKS_OCASO.forEach((v) =>
+    v.books.forEach((b) => {
+      if (b.isAvalible) {
+        BOOKS.push(b);
+      }
+    }),
+  );
+
+  return BOOKS.map((book: any) => ({
+    params: {
+      slug: book.slug,
+    },
+    props: {
+      book,
+    },
+  }));
+}
+
+const { book } = Astro.props;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  name: book.title,
+  description: book.description,
+  author: {
+    "@type": "Person",
+    name: "JJ Jabs",
+  },
+};
+---
+
+<Layout
+  title={`${book.title} — JJ Jabs`}
+  description={book.description}
+  canonical={`/libros/${book.slug}`}
+  type="article"
+>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(structuredData)}
+  />
+
+  <main>
+    <Navbar nameSeleced="" />
+    <div class="center flex col">
+      <h1>{book.title}</h1>
+
+      <p>{book.description}</p>
+
+      <!-- contenido del libro -->
+    </div>
+  </main>
+  <style>
+    .card {
+      background-color: #b1c2ba;
+      border: dashed black 0.2rem;
+      border-radius: 0.75rem;
+      padding: 0rem 2rem 2rem 2rem;
+      filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.34));
+    }
+    .card p,
+    .card ul li {
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings: "wdth" 75;
+      text-align: justify;
+    }
+    #img-specie {
+      height: 10rem;
+      max-width: 10rem;
+      aspect-ratio: cover;
+      border: #483a37 dashed 0.2rem;
+      border-radius: 0.5rem;
+    }
+    .specie-card {
+      border-radius: 0.75rem;
+      border: #483a37 dashed 0.25rem;
+    }
+
+    .img-description {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      text-align: justify;
+      justify-content: start;
+      align-items: start;
+      filter: none;
+    }
+
+    .full-size {
+      background-color: #7e8984;
+      margin: 1rem;
+      margin-top: 2rem;
+      padding: 1rem;
+      padding-top: 0.25rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .img-description {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</Layout>

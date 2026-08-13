@@ -16,6 +16,7 @@ export const BOOKS_OCASO = [
           "https://drive.google.com/file/d/1bhwZrGxOHvXFtD_dhB_kSEhh_TKs6pca/view",
         description:
           "Historia corta que narra los acontecimientos que vivieron los Plestri al descubrir que no estaban solos. En esta historia se presenta al unión de los sectores exteriores para poder defenderse de una amenaza capaz de saltar entre galaxias.",
+        slug: "la-raiz",
       },
     ],
   },
@@ -33,6 +34,7 @@ export const BOOKS_OCASO = [
         description:
           "En un Imperio donde crear vida es una herejía, el genetista Betho recibe la misión de terraformar planetas mediante criaturas diseñadas para sobrevivir a cualquier entorno.",
         img: amalgama,
+        slug: "el-sector-muerto",
       },
     ],
   },
@@ -47,6 +49,7 @@ export const BOOKS_OCASO = [
         saga: "",
         description:
           "Betho intenta continuar su vida, cayendo en las reptantes acciones de los Sormiess quienes le han pedido repetir su error nuevamente.",
+        slug: "nueva-vida",
       },
     ],
   },
@@ -54,11 +57,13 @@ export const BOOKS_OCASO = [
     date: "700.002",
     books: [
       {
+        isAvalible: false,
         title: "La Ultima",
         icon: "libro",
         labels: ["Genesis"],
         saga: "",
         description: "Origen de la Nueva Forja y su gente.",
+        slug: "la-ultima",
       },
     ],
   },
@@ -73,6 +78,7 @@ export const BOOKS_OCASO = [
         saga: "",
         description:
           "Historia de trasfondo sobre los Pan Agon Glin y sus creencias.",
+        slug: "la-senda",
       },
     ],
   },
@@ -88,6 +94,7 @@ export const BOOKS_OCASO = [
         description:
           "Una exploración arqueológica en un planeta muerto por la radiación de su estrella revelará tener vestigios de vida, los protocolos de conservación biológica exigen una revisión profunda del territorio para evitar la pérdida del pasado de quienes no pudieron llegar al presente, pero algo mas se oculta entre las ruinas.",
         img: pangolin,
+        slug: "migajas-del-pasado",
       },
     ],
   },
@@ -103,6 +110,7 @@ export const BOOKS_OCASO = [
         description:
           "El trabajo de Lar-ry le lleva a comprar implantes que le permiten pensar con libertad y comprender el mundo a su alrededor. Esto le trae el peso de la libertad, donde el y su gente solo son inferiores en una galaxia mucho mas oscuridad de lo que el creía.",
         img: elLider,
+        slug: "zona-gris",
       },
     ],
   },
