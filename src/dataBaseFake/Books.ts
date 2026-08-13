@@ -2,6 +2,11 @@ import amalgama from "../assets/species/Amalgama.png";
 import pangolin from "../assets/species/Pan_Agon_Glin.jpg";
 import elLider from "../assets/ElLider.jpg";
 
+import LaRaiz from "../assets/Portada_El_Sector_Muerto.jpg";
+import ElSectorMuerto from "../assets/Portada_El_Sector_Muerto.jpg";
+import MigajasDelPasado from "../assets/Migajas_Del_Pasado.webp";
+import ZonaGris from "../assets/ZonaGris.jpg";
+
 export const BOOKS_OCASO = [
   {
     date: "600.000",
@@ -17,6 +22,7 @@ export const BOOKS_OCASO = [
         description:
           "Historia corta que narra los acontecimientos que vivieron los Plestri al descubrir que no estaban solos. En esta historia se presenta al unión de los sectores exteriores para poder defenderse de una amenaza capaz de saltar entre galaxias.",
         slug: "la-raiz",
+        cover: LaRaiz,
       },
     ],
   },
@@ -35,6 +41,7 @@ export const BOOKS_OCASO = [
           "En un Imperio donde crear vida es una herejía, el genetista Betho recibe la misión de terraformar planetas mediante criaturas diseñadas para sobrevivir a cualquier entorno.",
         img: amalgama,
         slug: "el-sector-muerto",
+        cover: ElSectorMuerto,
       },
     ],
   },
@@ -47,9 +54,11 @@ export const BOOKS_OCASO = [
         icon: "jeringa",
         labels: ["Ciencia Ficcion", "Mutantes"],
         saga: "",
+        urlRead: "",
         description:
           "Betho intenta continuar su vida, cayendo en las reptantes acciones de los Sormiess quienes le han pedido repetir su error nuevamente.",
         slug: "nueva-vida",
+        cover: LaRaiz,
       },
     ],
   },
@@ -62,8 +71,10 @@ export const BOOKS_OCASO = [
         icon: "libro",
         labels: ["Genesis"],
         saga: "",
+        urlRead: "",
         description: "Origen de la Nueva Forja y su gente.",
         slug: "la-ultima",
+        cover: LaRaiz,
       },
     ],
   },
@@ -76,9 +87,11 @@ export const BOOKS_OCASO = [
         icon: "pangolin",
         labels: ["Genesis"],
         saga: "",
+        urlRead: "",
         description:
           "Historia de trasfondo sobre los Pan Agon Glin y sus creencias.",
         slug: "la-senda",
+        cover: LaRaiz,
       },
     ],
   },
@@ -90,11 +103,13 @@ export const BOOKS_OCASO = [
         isAvalible: false,
         icon: "pangolin",
         saga: "",
+        urlRead: "",
         labels: ["Ciencia Ficción", "Recuentos de la vida", "Cozy"],
         description:
           "Una exploración arqueológica en un planeta muerto por la radiación de su estrella revelará tener vestigios de vida, los protocolos de conservación biológica exigen una revisión profunda del territorio para evitar la pérdida del pasado de quienes no pudieron llegar al presente, pero algo mas se oculta entre las ruinas.",
         img: pangolin,
         slug: "migajas-del-pasado",
+        cover: MigajasDelPasado,
       },
     ],
   },
@@ -106,11 +121,13 @@ export const BOOKS_OCASO = [
         isAvalible: false,
         icon: "mantis",
         saga: "Los Cinco Anillos",
+        urlRead: "",
         labels: ["Ciencia Ficción", "Aventura", "Acción"],
         description:
           "El trabajo de Lar-ry le lleva a comprar implantes que le permiten pensar con libertad y comprender el mundo a su alrededor. Esto le trae el peso de la libertad, donde el y su gente solo son inferiores en una galaxia mucho mas oscuridad de lo que el creía.",
         img: elLider,
         slug: "zona-gris",
+        cover: ZonaGris,
       },
     ],
   },

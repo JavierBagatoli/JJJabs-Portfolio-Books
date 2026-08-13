@@ -5,6 +5,8 @@ import { BOOKS_OCASO } from "../../dataBaseFake/Books";
 import Layout from "../../layouts/Layout.astro";
 import "../index.css";
 
+const bok = BOOKS_OCASO[0].books[0];
+
 export function getStaticPaths() {
   const BOOKS: { title: string; description: string }[] = [];
 
@@ -25,46 +27,24 @@ export function getStaticPaths() {
     },
   }));
 }
-
-const { book } = Astro.props;
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Book",
-  name: book.title,
-  description: book.description,
-  author: {
-    "@type": "Person",
-    name: "JJ Jabs",
-  },
-};
 ---
 
-<Layout
-  title={`${book.title} — JJ Jabs`}
-  description={book.description}
-  canonical={`/libros/${book.slug}`}
-  type="article"
->
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(structuredData)}
-  />
+<Layout>
   <main>
     <Navbar nameSeleced="" />
     <div id="container" style=" display: flex; flex-direction: row;">
       <div>
         <Image
-          src={book.cover}
-          alt={`Se puede apreciar la portada del libro ${book.title}`}
+          src={bok.cover}
+          alt={`Se puede apreciar la portada del libro ${bok.title}`}
         />
       </div>
       <div class="card" style="height: fit-content;">
-        <h1>{book.title}</h1>
-        <p>{book.description}</p>
+        <h1>{bok.title}</h1>
+        <p>{bok.description}</p>
         <div>
           <button
-            onclick=`window.location.href="${book.urlRead}"`
+            onclick=`window.location.href="${bok.urlRead}"`
             class="button-comprar"
             >Comprar $3 dolares
           </button>
