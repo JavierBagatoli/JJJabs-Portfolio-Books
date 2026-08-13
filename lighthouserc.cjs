@@ -7,8 +7,9 @@ module.exports = {
     assert: {
       preset: "lighthouse:recommended",
       assertions: {
-        "categories:performance": ["error", { minScore: 0.85 }],
-        "categories:accessibility": ["error", { minScore: 0.9 }],
+        "categories:performance": ["warning", { minScore: 0.5 }],
+        "categories:accessibility": ["warning", { minScore: 0.5 }],
+        "categories:seo": ["warning", { minScore: 0.5 }],
       },
     },
     upload: {

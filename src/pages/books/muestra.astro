@@ -5,7 +5,7 @@ import { BOOKS_OCASO } from "../../dataBaseFake/Books";
 import Layout from "../../layouts/Layout.astro";
 import "../index.css";
 
-const bok = BOOKS_OCASO[0].books[0];
+const bok = BOOKS_OCASO[1].books[0];
 
 export function getStaticPaths() {
   const BOOKS: { title: string; description: string }[] = [];
@@ -35,6 +35,7 @@ export function getStaticPaths() {
     <div id="container" style=" display: flex; flex-direction: row;">
       <div>
         <Image
+          height={290}
           src={bok.cover}
           alt={`Se puede apreciar la portada del libro ${bok.title}`}
         />
@@ -46,7 +47,7 @@ export function getStaticPaths() {
           <button
             onclick=`window.location.href="${bok.urlRead}"`
             class="button-comprar"
-            >Comprar $3 dolares
+            >Comprar en Amazon por $3 dolares
           </button>
         </div>
       </div>
