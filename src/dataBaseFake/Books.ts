@@ -50,7 +50,7 @@ export const BOOKS_OCASO = [
     books: [
       {
         title: "Nueva Vida",
-        isAvalible: false,
+        isAvalible: undefined,
         icon: "jeringa",
         labels: ["Ciencia Ficcion", "Mutantes"],
         saga: "",
@@ -66,7 +66,7 @@ export const BOOKS_OCASO = [
     date: "700.002",
     books: [
       {
-        isAvalible: false,
+        isAvalible: undefined,
         title: "La Ultima",
         icon: "libro",
         labels: ["Genesis"],
@@ -83,7 +83,7 @@ export const BOOKS_OCASO = [
     books: [
       {
         title: "La Senda",
-        isAvalible: false,
+        isAvalible: undefined,
         icon: "pangolin",
         labels: ["Genesis"],
         saga: "",
