@@ -6,6 +6,7 @@ import Image from "astro/components/Image.astro";
 import onProgress from "../../assets/en-proceso.png";
 
 const titleForNavigate: string = title.replaceAll(" ", "-");
+const urlToPage: string = `/books/${titleForNavigate}`;
 ---
 
 <div id="book_background" class={isAvalible ? "" : "no_avalible"}>
@@ -35,10 +36,7 @@ const titleForNavigate: string = title.replaceAll(" ", "-");
     <p id="description">
       {description}
     </p>
-    <a
-      style=`${isAvalible !== true && "display: none;"}`
-      href=`/books/${titleForNavigate}`>Más información</a
-    >
+    {isAvalible === true && <a href={urlToPage}>Más información</a>}
 
     <div id="label_list">
       {labels?.map((label: string) => <Label id="label" label={label} />)}
@@ -47,6 +45,20 @@ const titleForNavigate: string = title.replaceAll(" ", "-");
 </div>
 
 <style>
+  a {
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  a:visited {
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  a:hover {
+    color: rgb(245, 231, 231);
+  }
+
   .link-referal {
     display: flex;
     flex-wrap: nowrap;

@@ -34,6 +34,7 @@ export const BOOKS_OCASO = [
       {
         isAvalible: true,
         title: "El Sector Muerto",
+        titlePage: "Space Opera de",
         labels: ["Ciencia Ficcion", "Mutantes"],
         icon: "jeringa",
         saga: "El Fracaso de los antiguos",
@@ -52,6 +53,7 @@ export const BOOKS_OCASO = [
     books: [
       {
         title: "Nueva Vida",
+        titlePage: "Space Opera de",
         isAvalible: undefined,
         icon: "jeringa",
         labels: ["Ciencia Ficcion", "Mutantes"],
@@ -70,6 +72,7 @@ export const BOOKS_OCASO = [
       {
         isAvalible: undefined,
         title: "La Ultima",
+        titlePage: "Space Opera de",
         icon: "libro",
         labels: ["Genesis"],
         saga: "",
@@ -85,6 +88,7 @@ export const BOOKS_OCASO = [
     books: [
       {
         title: "La Senda",
+        titlePage: "Space Opera de",
         isAvalible: undefined,
         icon: "pangolin",
         labels: ["Genesis"],
@@ -102,6 +106,7 @@ export const BOOKS_OCASO = [
     books: [
       {
         title: "Migajas del Pasado",
+        titlePage: "Space Opera de",
         isAvalible: false,
         icon: "pangolin",
         saga: "",
@@ -120,6 +125,7 @@ export const BOOKS_OCASO = [
     books: [
       {
         title: "Zona Gris",
+        titlePage: "Space Opera de",
         isAvalible: false,
         icon: "mantis",
         saga: "Los Cinco Anillos",
