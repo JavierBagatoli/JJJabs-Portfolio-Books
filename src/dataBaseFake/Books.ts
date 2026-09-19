@@ -32,10 +32,10 @@ export const BOOKS_OCASO = [
     books: [
       {
         isAvalible: true,
-        title: "El Sector Muerto: El Fracaso de los antiguos",
+        title: "El Sector Muerto",
         labels: ["Ciencia Ficcion", "Mutantes"],
         icon: "jeringa",
-        saga: "",
+        saga: "El Fracaso de los antiguos",
         urlRead:
           "https://www.amazon.com/-/es/J-J-Jabs-ebook/dp/B0FJ437FJ3/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=389W8FTU1XMU1&dib=eyJ2IjoiMSJ9.M3C4nt9-Ou1kFEGKzi0OvB66YfQlRdyluiJOYllqoDo.-nvsbV9wiBJOePCTyDS3QyBBQ0d6xcdyy2Qb06UJ3ho&dib_tag=se&keywords=sector+muerto&qid=1781296692&s=books&sprefix=sector+muerto%2Cstripbooks-intl-ship%2C244&sr=1-1",
         description:

@@ -4,7 +4,8 @@ const { img, isAvalible, saga, title, description, labels, urlRead } =
   Astro.props.book;
 import Image from "astro/components/Image.astro";
 import noAvalible from "../../../public/work-in-progress.png";
-import { undefined } from "astro:schema";
+
+const titleForNavigate: string = title.replaceAll(" ", "-");
 ---
 
 <div id="book_background" class={isAvalible ? "" : "no_avalible"}>
@@ -31,7 +32,10 @@ import { undefined } from "astro:schema";
         {saga.length > 2 && <span> - {saga}</span>}
       </h2>
     </div>
-    <p id="description">{description}</p>
+    <p id="description">
+      {description}
+    </p>
+    <a href=`/books/${titleForNavigate}`>Más información</a>
     <div id="label_list">
       {labels?.map((label: string) => <Label id="label" label={label} />)}
     </div>

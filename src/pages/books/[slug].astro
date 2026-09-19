@@ -63,7 +63,7 @@ const structuredData = {
     <div id="container" style="display: flex; flex-direction: row;">
       <div
         class="wrap"
-        style="display: flex; flex-direction: row; justify-content: center;"
+        style="gap: 1rem; display: flex; flex-direction: row; justify-content: center;"
       >
         <div>
           <Image
@@ -79,7 +79,7 @@ const structuredData = {
               onclick=`window.location.href="${book.urlRead}"`
               class="button-comprar"
               >{
-                book.urlRead.includes === "drive"
+                book.urlRead.includes("drive")
                   ? "Leer en drive"
                   : "Comprar por $3 dolares"
               }
