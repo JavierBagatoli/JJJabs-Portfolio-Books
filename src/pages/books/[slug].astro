@@ -73,7 +73,20 @@ const structuredData = {
         </div>
         <div class="card" style="height: fit-content;">
           <h1>{book.title}</h1>
+          <h3>Sinopsis</h3>
           <p>{book.description}</p>
+          <h3>Especies Relevantes:</h3>
+          <ul>
+            {
+              book.species.map((e: string) => (
+                <li>
+                  <a href={`species/${e.toLowerCase().replaceAll(" ", "-")}`}>
+                    {e}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
           <div>
             <button
               onclick=`window.location.href="${book.urlRead}"`

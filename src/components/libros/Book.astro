@@ -1,12 +1,11 @@
 ---
 import Label from "./Label.astro";
-const { img, isAvalible, saga, title, description, labels, urlRead } =
+const { img, isAvalible, saga, title, description, labels, urlRead, slug } =
   Astro.props.book;
 import Image from "astro/components/Image.astro";
 import onProgress from "../../assets/en-proceso.png";
 
-const titleForNavigate: string = title.replaceAll(" ", "-");
-const urlToPage: string = `/books/${titleForNavigate}`;
+const urlToPage: string = `/books/${slug}`;
 ---
 
 <div id="book_background" class={isAvalible ? "" : "no_avalible"}>

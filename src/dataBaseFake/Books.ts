@@ -22,8 +22,9 @@ export const BOOKS_OCASO = [
         urlRead:
           "https://drive.google.com/file/d/1bhwZrGxOHvXFtD_dhB_kSEhh_TKs6pca/view",
         description:
-          "Historia corta que narra los acontecimientos que vivieron los Plestri al descubrir que no estaban solos. En esta historia se presenta al unión de los sectores exteriores para poder defenderse de una amenaza capaz de saltar entre galaxias.",
+          "Historia corta que narra los acontecimientos que vivieron losal descubrir que no estaban solos. En esta historia se presenta al unión de los sectores exteriores para poder defenderse de una amenaza capaz de saltar entre galaxias.",
         slug: "la-raiz",
+        species: ["Plestri"],
         cover: EnProgreso,
       },
     ],
@@ -33,17 +34,18 @@ export const BOOKS_OCASO = [
     books: [
       {
         isAvalible: true,
-        title: "El Sector Muerto",
+        title: "El Sector Muerto: El Fracaso de los antiguos",
         titlePage: "Space Opera de",
         labels: ["Ciencia Ficcion", "Mutantes"],
         icon: "jeringa",
-        saga: "El Fracaso de los antiguos",
+        saga: "",
         urlRead:
           "https://www.amazon.com/-/es/J-J-Jabs-ebook/dp/B0FJ437FJ3/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=389W8FTU1XMU1&dib=eyJ2IjoiMSJ9.M3C4nt9-Ou1kFEGKzi0OvB66YfQlRdyluiJOYllqoDo.-nvsbV9wiBJOePCTyDS3QyBBQ0d6xcdyy2Qb06UJ3ho&dib_tag=se&keywords=sector+muerto&qid=1781296692&s=books&sprefix=sector+muerto%2Cstripbooks-intl-ship%2C244&sr=1-1",
         description:
-          "En un Imperio donde crear vida es una herejía, el genetista Betho recibe la misión de terraformar planetas mediante criaturas diseñadas para sobrevivir a cualquier entorno.",
+          "Adéntrate en esta Space Opera espacial donde descubrirás la aventura de Betho su criatura mutante, ambos sometidos a realizar una terraformación para el imperio galáctico antes de que se les acabe el tiempo.",
         img: amalgama,
         slug: "el-sector-muerto",
+        species: ["Amalgamas", "El Antiguo Imperio"],
         cover: ElSectorMuerto,
       },
     ],
@@ -62,6 +64,7 @@ export const BOOKS_OCASO = [
         description:
           "Betho intenta continuar su vida, cayendo en las reptantes acciones de los Sormiess quienes le han pedido repetir su error nuevamente.",
         slug: "nueva-vida",
+        species: ["El Antiguo Imperio", "Sormiess"],
         cover: EnProgreso,
       },
     ],
@@ -79,6 +82,7 @@ export const BOOKS_OCASO = [
         urlRead: "",
         description: "Origen de la Nueva Forja y su gente.",
         slug: "la-ultima",
+        species: ["??", "Reforjados"],
         cover: EnProgreso,
       },
     ],
@@ -97,6 +101,7 @@ export const BOOKS_OCASO = [
         description:
           "Historia de trasfondo sobre los Pan Agon Glin y sus creencias.",
         slug: "la-senda",
+        species: ["Pan Agon Gin"],
         cover: EnProgreso,
       },
     ],
@@ -116,6 +121,14 @@ export const BOOKS_OCASO = [
           "Una exploración arqueológica en un planeta muerto por la radiación de su estrella revelará tener vestigios de vida, los protocolos de conservación biológica exigen una revisión profunda del territorio para evitar la pérdida del pasado de quienes no pudieron llegar al presente, pero algo mas se oculta entre las ruinas.",
         img: pangolin,
         slug: "migajas-del-pasado",
+        species: [
+          "Pan Agon Gin",
+          "Guppies",
+          "Zyndrak",
+          "Sormiess",
+          "Mnatis",
+          "Plestri",
+        ],
         cover: MigajasDelPasado,
       },
     ],
@@ -135,6 +148,7 @@ export const BOOKS_OCASO = [
           "El trabajo de Lar-ry le lleva a comprar implantes que le permiten pensar con libertad y comprender el mundo a su alrededor. Esto le trae el peso de la libertad, donde el y su gente solo son inferiores en una galaxia mucho mas oscuridad de lo que el creía.",
         img: elLider,
         slug: "zona-gris",
+        species: ["Mantis", "Reforjados", "La Red", "Guppies", "Biorpias"],
         cover: ZonaGris,
       },
     ],
