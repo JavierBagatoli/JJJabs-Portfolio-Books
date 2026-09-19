@@ -1,38 +1,35 @@
 ---
 import { Image } from "astro:assets";
 import Navbar from "../../components/Navbar.astro";
-import { BOOKS_OCASO } from "../../dataBaseFake/Books";
+
 import Layout from "../../layouts/Layout.astro";
 import "../index.css";
+import { SPECIES } from "../../dataBaseFake/species";
+
+interface iSpecies {
+  name: string;
+  description: string;
+  image: any;
+}
 
 export function getStaticPaths() {
-  const BOOKS: { title: string; description: string }[] = [];
-
-  BOOKS_OCASO.forEach((v) =>
-    v.books.forEach((b) => {
-      if (b.isAvalible) {
-        BOOKS.push(b);
-      }
-    }),
-  );
-
-  return BOOKS.map((book: any) => ({
+  return SPECIES.map((esp: any) => ({
     params: {
-      slug: book.slug,
+      slug: esp.name,
     },
     props: {
-      book,
+      esp,
     },
   }));
 }
 
-const { book } = Astro.props;
+const { esp } = Astro.props;
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Book",
-  name: `${book.title} —  ${book.titlePage} JJ Jabs`,
-  description: book.description,
+  name: `${esp.name} — especie de  JJ Jabs`,
+  description: esp.description,
   author: {
     "@type": "Person",
     name: "JJ Jabs",
@@ -41,9 +38,9 @@ const structuredData = {
 ---
 
 <Layout
-  title={`${book.title} | ${book.titlePage} JJ Jabs`}
-  description={book.description}
-  canonical={`/books/${book.slug}`}
+  title={`${esp.name} | especie de JJ Jabs`}
+  description={esp.description}
+  canonical={`/books/${esp.name.toLowerCase().replaceAll(" ", "-")}`}
   type="article"
 >
   <script
@@ -59,39 +56,15 @@ const structuredData = {
       >
         <div>
           <Image
-            src={book.cover}
-            alt={`Se puede apreciar la portada del libro ${book.title}`}
+            src={esp.image}
+            alt={`Representación visual de los ${esp.name}`}
           />
         </div>
         <div class="card" style="height: fit-content;">
-          <h1>{book.title}</h1>
-          <h3>Sinopsis</h3>
-          <p>{book.description}</p>
+          <h1>{esp.name}</h1>
+          <h3>Descripcion:</h3>
+          <p>{esp.description}</p>
           <h3>Especies Relevantes:</h3>
-          <ul>
-            {
-              book.species.map((e: string) => (
-                <li>
-                  <a
-                    href={`../../species/${e.toLowerCase().replaceAll(" ", "-")}`}
-                  >
-                    {e}
-                  </a>
-                </li>
-              ))
-            }
-          </ul>
-          <div>
-            <button
-              onclick=`window.location.href="${book.urlRead}"`
-              class="button-comprar"
-              >{
-                book.urlRead.includes("drive")
-                  ? "Leer en drive"
-                  : "Comprar por $3 dolares"
-              }
-            </button>
-          </div>
         </div>
       </div>
     </div>
