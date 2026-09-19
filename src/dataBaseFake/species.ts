@@ -1,9 +1,9 @@
-import guppie from "../../assets/species/Guppie.jpg";
-import panAgoGlin from "../../assets/species/Pan_Agon_Glin.jpg";
-import zyndrak from "../../assets/species/Zyndrak.jpg";
-import sormiess from "../../assets/species/Sormiess.jpg";
-import amalgama from "../../assets/species/Amalgama.png";
-import workInProgress from "../../assets/en-proceso.png";
+import guppie from "../assets/species/Guppie.jpg";
+import panAgoGlin from "../assets/species/Pan_Agon_Glin.jpg";
+import zyndrak from "../assets/species/Zyndrak.jpg";
+import sormiess from "../assets/species/Sormiess.jpg";
+import amalgama from "../assets/species/Amalgama.png";
+import workInProgress from "../assets/en-proceso.png";
 
 export const SPECIES = [
   {
