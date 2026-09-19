@@ -28,10 +28,18 @@ export function getStaticPaths() {
 
 const { book } = Astro.props;
 
+const titles: string[] = [
+  "ciencia ficción",
+  "novelas de ciencia ficción",
+  "space opera",
+  "libros de ciencia ficción",
+];
+const addTitle = titles[Math.floor(Math.random() * titles.length)];
+
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Book",
-  name: book.title,
+  name: `${book.title} —  ${book.titlePage} JJ Jabs`,
   description: book.description,
   author: {
     "@type": "Person",
@@ -41,9 +49,9 @@ const structuredData = {
 ---
 
 <Layout
-  title={`${book.title} — JJ Jabs`}
+  title={`${book.title} —  ${book.titlePage} JJ Jabs`}
   description={book.description}
-  canonical={`/libros/${book.slug}`}
+  canonical={`/books/${book.slug}`}
   type="article"
 >
   <script
@@ -52,26 +60,33 @@ const structuredData = {
   />
   <main>
     <Navbar nameSeleced="" />
-    <div id="container" style=" display: flex; flex-direction: row;">
-      <div>
-        <Image
-          src={book.cover}
-          alt={`Se puede apreciar la portada del libro ${book.title}`}
-        />
-      </div>
-      <div class="card" style="height: fit-content;">
-        <h1>{book.title}</h1>
-        <p>{book.description}</p>
+    <div id="container" style="display: flex; flex-direction: row;">
+      <div
+        class="wrap"
+        style="display: flex; flex-direction: row; justify-content: center;"
+      >
         <div>
-          <button
-            onclick=`window.location.href="${book.urlRead}"`
-            class="button-comprar"
-            >Comprar $3 dolares
-          </button>
+          <Image
+            src={book.cover}
+            alt={`Se puede apreciar la portada del libro ${book.title}`}
+          />
+        </div>
+        <div class="card" style="height: fit-content;">
+          <h1>{book.title}</h1>
+          <p>{book.description}</p>
+          <div>
+            <button
+              onclick=`window.location.href="${book.urlRead}"`
+              class="button-comprar"
+              >{
+                book.urlRead.includes === "drive"
+                  ? "Leer en drive"
+                  : "Comprar por $3 dolares"
+              }
+            </button>
+          </div>
         </div>
       </div>
-
-      <!-- contenido del libro -->
     </div>
   </main>
   <style>
@@ -134,7 +149,8 @@ const structuredData = {
     }
 
     @media only screen and (max-width: 600px) {
-      .img-description {
+      .img-description,
+      .wrap {
         flex-wrap: wrap;
       }
     }

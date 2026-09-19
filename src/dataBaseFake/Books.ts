@@ -14,6 +14,7 @@ export const BOOKS_OCASO = [
       {
         isAvalible: true,
         title: "La Raiz",
+        titlePage: "ciencia ficción de",
         labels: ["Ciencia Ficcion", "Antologia Mitos"],
         icon: "libro",
         saga: "",
