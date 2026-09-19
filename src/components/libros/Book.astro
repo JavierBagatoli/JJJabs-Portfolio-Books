@@ -3,7 +3,7 @@ import Label from "./Label.astro";
 const { img, isAvalible, saga, title, description, labels, urlRead } =
   Astro.props.book;
 import Image from "astro/components/Image.astro";
-import noAvalible from "../../../public/work-in-progress.png";
+import onProgress from "../../assets/en-proceso.png";
 
 const titleForNavigate: string = title.replaceAll(" ", "-");
 ---
@@ -11,7 +11,7 @@ const titleForNavigate: string = title.replaceAll(" ", "-");
 <div id="book_background" class={isAvalible ? "" : "no_avalible"}>
   <section id="book_cover">
     <Image
-      src={img ? img : noAvalible}
+      src={img ? img : onProgress}
       alt="Book Cover"
       height="200"
       width="200"

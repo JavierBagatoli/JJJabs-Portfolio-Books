@@ -2,10 +2,11 @@ import amalgama from "../assets/species/Amalgama.png";
 import pangolin from "../assets/species/Pan_Agon_Glin.jpg";
 import elLider from "../assets/ElLider.jpg";
 
-import LaRaiz from "../assets/Portada_El_Sector_Muerto.jpg";
 import ElSectorMuerto from "../assets/Portada_El_Sector_Muerto.jpg";
 import MigajasDelPasado from "../assets/Migajas_Del_Pasado.webp";
 import ZonaGris from "../assets/ZonaGris.jpg";
+
+import EnProgreso from "../assets/en-proceso.png";
 
 export const BOOKS_OCASO = [
   {
@@ -23,7 +24,7 @@ export const BOOKS_OCASO = [
         description:
           "Historia corta que narra los acontecimientos que vivieron los Plestri al descubrir que no estaban solos. En esta historia se presenta al unión de los sectores exteriores para poder defenderse de una amenaza capaz de saltar entre galaxias.",
         slug: "la-raiz",
-        cover: LaRaiz,
+        cover: EnProgreso,
       },
     ],
   },
@@ -59,7 +60,7 @@ export const BOOKS_OCASO = [
         description:
           "Betho intenta continuar su vida, cayendo en las reptantes acciones de los Sormiess quienes le han pedido repetir su error nuevamente.",
         slug: "nueva-vida",
-        cover: LaRaiz,
+        cover: EnProgreso,
       },
     ],
   },
@@ -75,7 +76,7 @@ export const BOOKS_OCASO = [
         urlRead: "",
         description: "Origen de la Nueva Forja y su gente.",
         slug: "la-ultima",
-        cover: LaRaiz,
+        cover: EnProgreso,
       },
     ],
   },
@@ -92,7 +93,7 @@ export const BOOKS_OCASO = [
         description:
           "Historia de trasfondo sobre los Pan Agon Glin y sus creencias.",
         slug: "la-senda",
-        cover: LaRaiz,
+        cover: EnProgreso,
       },
     ],
   },
