@@ -35,7 +35,11 @@ const titleForNavigate: string = title.replaceAll(" ", "-");
     <p id="description">
       {description}
     </p>
-    <a href=`/books/${titleForNavigate}`>Más información</a>
+    <a
+      style=`${isAvalible !== true && "display: none;"}`
+      href=`/books/${titleForNavigate}`>Más información</a
+    >
+
     <div id="label_list">
       {labels?.map((label: string) => <Label id="label" label={label} />)}
     </div>
