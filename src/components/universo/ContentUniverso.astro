@@ -35,6 +35,11 @@ import Image from "astro/components/Image.astro";
               <div>
                 {specie.description.map((desc) => (
                   <p>{desc}</p>
+                  <a
+                    href={`../species/${specie.name.toLowerCase().replaceAll(" ", "-")}`}
+                  >
+                    Más Información
+                  </a>
                 ))}
               </div>
             ) : (
