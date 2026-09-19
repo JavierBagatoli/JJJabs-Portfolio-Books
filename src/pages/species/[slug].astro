@@ -15,7 +15,7 @@ interface iSpecies {
 export function getStaticPaths() {
   return SPECIES.map((esp: any) => ({
     params: {
-      slug: esp.name,
+      slug: esp.name.toLowerCase().replaceAll(" ", "-"),
     },
     props: {
       esp,
