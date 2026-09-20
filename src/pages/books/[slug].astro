@@ -58,10 +58,7 @@ const structuredData = {
         style="gap: 1rem; display: flex; flex-direction: row; justify-content: center;"
       >
         <div>
-          <Image
-            src={book.cover}
-            alt={`Se puede apreciar la portada del libro ${book.title}`}
-          />
+          <Image src={book.cover} alt={`Portada de ${book.title}`} />
         </div>
         <div class="card" style="height: fit-content;">
           <h1>{book.title}</h1>
