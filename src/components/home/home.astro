@@ -3,6 +3,10 @@ import SectorMuerto from "../../assets/Portada_El_Sector_Muerto.jpg";
 import MigajasDelPasado from "../../assets/Migajas_Del_Pasado.webp";
 import ZonGris from "../../assets/ZonaGris.jpg";
 import Image from "astro/components/Image.astro";
+
+import amalgama from "../../assets/species/Amalgama.png";
+import zyndrak from "../../assets/species/Zyndrak.jpg";
+import guppie from "../../assets/species/Guppie.jpg";
 ---
 
 <main id="container">
@@ -52,17 +56,69 @@ import Image from "astro/components/Image.astro";
     </div>
 
     <div
+      class="card"
       style={{
         display: "flex",
-        "flex-direction": "row",
-        gap: "2rem",
+        "flex-direction": "column",
         "justify-content": "center",
         "flex-wrap": "wrap",
       }}
     >
-      <Image height="390" src={SectorMuerto} alt="Logo de Ocaso" />
-      <Image height="390" src={MigajasDelPasado} alt="Logo de Ocaso" />
-      <Image height="390" src={ZonGris} alt="Logo de Ocaso" />
+      <h2>Mis Libros:</h2>
+
+      <div style={{ display: "flex", gap: "2rem" }}>
+        <a href="/books/el-sector-muerto">
+          <Image
+            height="390"
+            src={SectorMuerto}
+            alt="Portada de 'El Sector Muerto'"
+          />
+        </a>
+        <a href="/books-page">
+          <Image
+            height="390"
+            src={MigajasDelPasado}
+            alt="Portada de 'Migajas del Pasado"
+          />
+        </a>
+        <a href="/books-page">
+          <Image height="390" src={ZonGris} alt="Portada de 'Zona Gris" />
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="card"
+      style={{
+        display: "flex",
+        "flex-direction": "column",
+        "justify-content": "center",
+        "flex-wrap": "wrap",
+      }}
+    >
+      <h2><a href="/universo-page">Mis civilizaciones:</a></h2>
+
+      <p>
+        No todo en el espacio tiene que ser guerra y conquista galactica, conoce
+        las distintas civilizaciones que se inundado el doble eje:
+        <ul>
+          <li>
+            Los <a href="/species/guppies">Guppies</a> como los carismaticos y comerciantes.
+          </li>
+          <li>
+            Los <a href="/species/zyndrak">Zyndrak</a> como los gigantes fuertes,
+            pero de gran conocimiento.
+          </li>
+          <li>
+            Los <a href="/pan-agon-glin">Pan Agon Gin</a> jovenes aventureros en esta
+            galaxia.
+          </li>
+          <li>
+            Las <a href="/species/mantis">Mantis</a>, una especie dominada y que
+            busca su libertad
+          </li>
+        </ul>
+      </p>
     </div>
   </section>
 </main>
@@ -82,12 +138,15 @@ import Image from "astro/components/Image.astro";
     li {
       color: #000000ce;
     }
+    h2 {
+      margin-top: 0rem;
+    }
   }
   .card {
     background-color: #b1c2ba;
     border: dashed black 0.2rem;
     border-radius: 0.75rem;
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
   }
 
   p {
