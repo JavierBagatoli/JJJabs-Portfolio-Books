@@ -101,7 +101,7 @@ export const BOOKS_OCASO = [
         description:
           "Historia de trasfondo sobre los Pan Agon Glin y sus creencias.",
         slug: "la-senda",
-        species: ["Pan Agon Gin"],
+        species: ["Pan Agon Glin"],
         cover: EnProgreso,
       },
     ],
@@ -122,7 +122,7 @@ export const BOOKS_OCASO = [
         img: pangolin,
         slug: "migajas-del-pasado",
         species: [
-          "Pan Agon Gin",
+          "Pan Agon Glin",
           "Guppies",
           "Zyndrak",
           "Sormiess",

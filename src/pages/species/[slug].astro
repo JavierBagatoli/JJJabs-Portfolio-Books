@@ -5,6 +5,8 @@ import Navbar from "../../components/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
 import "../index.css";
 import { SPECIES } from "../../dataBaseFake/species";
+import { BOOKS_OCASO } from "../../dataBaseFake/Books";
+import { string } from "astro:schema";
 
 interface iSpecies {
   name: string;
@@ -35,6 +37,29 @@ const structuredData = {
     name: "JJ Jabs",
   },
 };
+
+const listOfBooks: { title: string; slug: string }[] = [];
+
+interface listOfBooks {
+  books: { species: string[]; slug: string; title: string }[];
+}
+
+BOOKS_OCASO.forEach((year: listOfBooks) => {
+  year.books.forEach(
+    (b: { species: string[]; slug: string; title: string }) => {
+      const addBook = b.species.find(
+        (s: string) => s.toLowerCase() === esp.name.toLowerCase(),
+      );
+
+      if (addBook) {
+        listOfBooks.push({
+          title: b.title,
+          slug: b.slug,
+        });
+      }
+    },
+  );
+});
 ---
 
 <Layout
@@ -63,17 +88,25 @@ const structuredData = {
         <div class="card" style="height: fit-content;">
           <h1>{esp.name}</h1>
           <h3>Descripción:</h3>
-          <p>{esp.description}</p>
-          <h3>Descripción:</h3>
-          <p></p>
+          {esp.description.map((v: string) => <p>{v}</p>)}
           <h3>Origen:</h3>
-          <p></p>
+          <p>{esp.descriptionAmpliada.origen}</p>
           <h3>Biología:</h3>
-          <p></p>
+          <p>{esp.descriptionAmpliada.biologia}</p>
           <h3>Sociedad y cultura:</h3>
-          <p></p>
+          <p>{esp.descriptionAmpliada.sociedad}</p>
           <h3>Tecnología:</h3>
-          <p></p>
+          <p>{esp.descriptionAmpliada.tecnologia}</p>
+          <h3>Apariciones en:</h3>
+          <ul>
+            {
+              listOfBooks.map((v) => (
+                <li>
+                  <a href={`../../books/${v.slug}`}>{v.title}</a>
+                </li>
+              ))
+            }
+          </ul>
         </div>
       </div>
     </div>
