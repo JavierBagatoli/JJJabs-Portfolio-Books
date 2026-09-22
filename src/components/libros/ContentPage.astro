@@ -6,6 +6,7 @@ const items = BOOKS_OCASO;
 ---
 
 <div id="container">
+  <h1>Libros publicados y planeados</h1>
   {
     items?.map((item) =>
       item.books?.map((book) => <Book id="book_container" book={book} />),
@@ -14,6 +15,9 @@ const items = BOOKS_OCASO;
 </div>
 
 <style>
+  h1 {
+    font-size: 1.5rem;
+  }
   #container {
     width: 100%;
   }

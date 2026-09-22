@@ -14,11 +14,11 @@ export const SPECIES = [
       "Pesan cerca de los 17 kilos, miden poco más de medio metro de altura, sus cuerpos son moldeables y pueden caminar por cualquier superficie y gravedad. Son capaces de sobrevivir en la mayoría de los entornos.",
     ],
     descriptionAmpliada: {
-      origen: "Son natales de la luna ****",
+      origen: "Son natales de la luna [información no revelada]",
       biologia:
         "Son una masa orgánica semi translucida, que cambia la forma de su cuerpo a placer y visten con piercings o dijes. Su piel nunca es atravesar y la moldean para sostener las ropas. Es común en ellos encontrarles transportando objetos en su interior.",
       sociedad:
-        "Les encantan las negociaciones y el comercio, la moneda que transaccionan normalmente esta hecho de materiales semejantes al plomo o capaces de bloquear la radiación.",
+        "Les encantan las negociaciones y el comercio, la moneda que transaccionan normalmente está hecho de materiales semejantes al plomo o capaces de bloquear la radiación.",
       tecnologia:
         "Su tecnología destaca en los escudos o detección de radiación, al igual que comprenden en profundidad el ciclo de tormentas de las estrellas con alta actividad",
     },
@@ -32,7 +32,7 @@ export const SPECIES = [
       "Tiene una fuerte fe en El Ojo, su dios que los ha vigilado desde el inicio de sus tiempos. Y su moral les impide dejar a un compañero atrás. Sus cuerpos están acorazados y son asimétricos al igual que toda la vida de su planeta.",
     ],
     descriptionAmpliada: {
-      origen: "Son natales de la luna ****",
+      origen: "Son natales de la luna [información no revelada]",
       biologia:
         "Su planeta esta dotado de la particularidad de la asimetría bilateral, la mayoría de las criaturas cuentan con un lado dominante donde dedos, brazos y escamas son el doble de grande. Algunas partes tienen más o menos apéndices. Son una especie acostumbrada al calor, y a las arenas.",
       sociedad:
@@ -50,7 +50,7 @@ export const SPECIES = [
       "Destacan por su tamaño, fuerza y gran inteligencia. Son hábiles en cualquier trabajo que se propongan gracias a sus múltiples tentáculos.",
     ],
     descriptionAmpliada: {
-      origen: "Son natales de la luna ****",
+      origen: "Son natales de la luna [información no revelada]",
       biologia:
         "De forma burda son grandes pulpos, que comunican su estado anémico por medio de las manchas bioluminiscentes pigmentadas. Son fuertes, resistentes e inteligentes. Su dieta es carnívora.",
       sociedad:
@@ -67,7 +67,7 @@ export const SPECIES = [
       "Por mucho tiempo han sido esclavos que no podían exigir su libertad, hasta ahora.",
     ],
     descriptionAmpliada: {
-      origen: "Son natales de la luna ****",
+      origen: "Son natales de la luna [información no revelada]",
       biologia: "Son nativos del planeta Mantis",
       sociedad:
         "Su sociedad es primitiva y confusa, la jerarquía social que existe es impuesta y no lograda. Existen familias y amigos, pero el desorden imposibilita por ello otras especies se encargan de gobernarles.",
@@ -79,7 +79,7 @@ export const SPECIES = [
     name: "Humanos – Renegados",
     description: [
       "Los renegados son una subdivisión de la divina y mi lógica humanidad. Son personas que han sido expulsadas o han renunciado a vivir en el privilegio. Y en consecuencia deben convivir con otras especies, usar su tecnología, se resguardan en unas pocas colonias.",
-      "Un Renegado no destaca, pero son tratados con cuidado porque es de conocimiento publico las hazañas que ha realizado su especie en otros tiempos. ",
+      "Un Renegado no destaca, pero son tratados con cuidado porque es de conocimiento público las hazañas que ha realizado su especie en otros tiempos. ",
     ],
     descriptionAmpliada: {
       origen: "Planeta o luna desconocido.",
@@ -98,7 +98,7 @@ export const SPECIES = [
       "Sus cuerpos son grandes, pesados y plagados de prótesis para interactuar con el mundo.",
     ],
     descriptionAmpliada: {
-      origen: "Son natales de la luna ****",
+      origen: "Son natales de la luna [información no revelada]",
       biologia: "Son serpientes gigantes, su vision es termica.",
       sociedad:
         "Individual, basa en los logros personales por encima del resto.",
@@ -115,7 +115,7 @@ export const SPECIES = [
       "Su comportamiento es sencillo, solo buscan defender sus territorios.",
     ],
     descriptionAmpliada: {
-      origen: "Son natales de la luna ****",
+      origen: "Son natales de la luna [información no revelada]",
       biologia: "Sus cuerpos mutan con cada sueño.",
       sociedad:
         "Sus sociedades son primitivas por obvios motivos, viven en clanes y tiene pequeños rituales. Saben identificarse los unos a los otros.",
@@ -129,7 +129,7 @@ export const SPECIES = [
       "Un imperio olvidado, solo quedan sus estructuras, recuerdos y los daños a las civilizaciones esclavasque tuvieron",
     ],
     descriptionAmpliada: {
-      origen: "Sector ****",
+      origen: "Sector [información no revelada]",
       biologia:
         "Su piel esta cubierta de escamas, tienen cuatro ojos, dos piernas, sus brazos tiene flecos que caen desde los codos hasta el largo de sus dedos.",
       sociedad: "Crecieron como imperio.",
@@ -140,14 +140,14 @@ export const SPECIES = [
   {
     name: "Colonias",
     description: [
-      "Las colmenas son una especie multi espécimen, su planeta y biología son excepcionalmente extrañas. Sus cuerpos están compuestos por varias criaturas vivas que cumplen una única función, pero en conjuntó rinden casi como cualquier individuo completo.",
+      "Las colmenas son una especie multi espécimen, su planeta y biología son excepcionalmente extrañas. Sus cuerpos están compuestos por varias criaturas vivas que cumplen una única función, pero en conjunto rinden casi como cualquier individuo completo.",
       "Es raro encontrar a uno de estos seres fuera de su planeta, pero cuando lo hacen se especializan en trabajos de inteligencia, observación o liderazgo.",
     ],
     descriptionAmpliada: {
-      origen: "Son natales del planeta oceanico ****",
-      biologia: "****",
-      sociedad: "****",
-      tecnologia: "****",
+      origen: "Son natales del planeta oceanico [información no revelada]",
+      biologia: "[información no revelada]",
+      sociedad: "[información no revelada]",
+      tecnologia: "[información no revelada]",
     },
     image: workInProgress,
   },
@@ -159,38 +159,38 @@ export const SPECIES = [
       "Son bajos, pero fuertes y resistentes. No ven la luz como otras especies y no tienen cabeza; su cuerpo se puede definir en un par de piernas, un par de brazos y un torso, a lo largo de su piel hay parches de quitina que les protege.",
     ],
     descriptionAmpliada: {
-      origen: "Son natales de la luna ****",
+      origen: "Son natales de la luna [información no revelada]",
       biologia:
         "Con criaturas de baja altura, cuerpos grandes y resistentes. Estan cubiertos por gruesas capas de quitina que no dejan de crecer hasta que esta les cubre por completo y causa su muerte.",
-      sociedad: "****",
-      tecnologia: "****",
+      sociedad: "[información no revelada]",
+      tecnologia: "[información no revelada]",
     },
     image: workInProgress,
   },
   {
     name: "Medusas",
     description: [
-      "Las medusas son una especie muy particular que difícilmente se encuentra fuera de sus planeta o colonias. Son la segunda especie vasalla de los Sormiess.",
+      "Las medusas son una especie muy particular que difícilmente se encuentra fuera de sus planetas o colonias. Son la segunda especie vasalla de los Sormiess.",
       "Su planeta se encuentra en limpieza, su avance tecnológico contaminó los océanos.",
     ],
     descriptionAmpliada: {
-      origen: "Son natales del planeta oceanico ****",
-      biologia: "****",
-      sociedad: "****",
-      tecnologia: "****",
+      origen: "Son natales del planeta oceanico [información no revelada]",
+      biologia: "[información no revelada]",
+      sociedad: "[información no revelada]",
+      tecnologia: "[información no revelada]",
     },
     image: workInProgress,
   },
   {
     name: "Plestri",
     description: [
-      "Son una especie antigua, pero caída en desgracia luego de que sus generales de la flota espacial decidiesen tomar el control. Perdieron su sistema solar por las guerras y daños a al ecosistema, ahora viven separados en tres colonias.",
+      "Son una especie antigua, pero caída en desgracia luego de que sus generales de la flota espacial decidiesen tomar el control. Perdieron su sistema solar por las guerras y daños al ecosistema, ahora viven separados en tres colonias.",
     ],
     descriptionAmpliada: {
-      origen: "****",
-      biologia: "****",
-      sociedad: "****",
-      tecnologia: "****",
+      origen: "[información no revelada]",
+      biologia: "[información no revelada]",
+      sociedad: "[información no revelada]",
+      tecnologia: "[información no revelada]",
     },
     image: workInProgress,
   },

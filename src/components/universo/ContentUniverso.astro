@@ -6,9 +6,9 @@ import Image from "astro/components/Image.astro";
 
 <div id="container">
   <div class="card">
-    <h2>Universo</h2>
+    <h1>Universo</h1>
     <p>
-      Mi universo transcurre miles de años en el futuro, en una galaxia que esta
+      Mi universo transcurre miles de años en el futuro, en una galaxia que está
       colisionando contra y seguirá durante miles de años.
     </p>
     <p>
@@ -39,7 +39,7 @@ import Image from "astro/components/Image.astro";
                 <a
                   href={`../species/${specie.name.toLowerCase().replaceAll(" ", "-")}`}
                 >
-                  Más Información
+                  Más sobre los {specie.name}
                 </a>
               </div>
             ) : (
@@ -53,6 +53,9 @@ import Image from "astro/components/Image.astro";
 </div>
 
 <style>
+  h1 {
+    font-size: 1.5rem;
+  }
   .card {
     background-color: #b1c2ba;
     border: dashed black 0.2rem;
